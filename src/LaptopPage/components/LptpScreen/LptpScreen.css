@@ -435,6 +435,18 @@
         font-weight: 500;
     }
 
+    .clseMessge-notif{
+        transform: translateX(-30%);
+    }
+
+    .clseMessge-notif i{
+
+        border-radius: 2px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     .dbleClckMeBttn p{
         height: max-content;
         padding: 6px;
