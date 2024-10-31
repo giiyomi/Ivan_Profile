@@ -121,8 +121,6 @@ export default function LptpScreen(props) {
     }
   }
 
-  console.log(hdClckMe)
-
   return (
     <div className={`laptop-screen ${shwGgleChrme? 'activeBrwsr' : ''}`}>
         <div className={`myprofile-icon ${oneClick? 'active' : ''}`}
