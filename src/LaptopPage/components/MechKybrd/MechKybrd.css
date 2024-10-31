@@ -175,6 +175,72 @@
         gap: 2px;
     }
 
-    
-    
+}
+
+@media (max-height:670px) {
+
+    .mechanical-keyboard{
+        padding: 2px;
+        grid-gap: 3px;
+    }
+
+    .key {
+        height: 15px;
+        font-size: 9px;
+    }
+
+    .second-row > *, .third-row > *, .fourth-row > *, .fifth-row > *, .sixth-row > * {
+        height: 22px !important;
+    }
+
+    .fbuttons {
+        grid-template-columns: repeat(4, 20px) 1fr repeat(4, 20px) 1fr repeat(4, 20px);
+        gap: 1px;
+    }
+
+    .prnt-ins-del{
+        grid-template-columns: repeat(3, 23px);
+        gap: 1px;
+    }
+
+    .first-row {
+        grid-template-columns: 23px 1px 1fr 1px max-content 20px ;
+        gap: 1px;
+    }
+
+    .second-row {
+        grid-template-columns: 20px repeat(12, 23px) 55px;
+        gap: 2px;
+    }
+
+    .key.tick, .key.undersc-minus, .key.plus-equals, .key.backspace{
+        font-size:7.5px;
+        display: flex;
+    }
+
+    .third-row {
+        grid-template-columns: 35px repeat(12, 23px) 40px;
+        gap: 2px;
+    }
+
+    .key.backslash{
+        font-size: 7px;
+    }
+
+    .fourth-row {
+        grid-template-columns: 40px repeat(11, 23px) 60px;
+        gap: 2px;
+    }
+
+    .fifth-row {
+        display: grid;
+        grid-template-columns: 45px repeat(10, 23px) 35px 23px ;
+        gap: 2px;
+    }
+
+    .sixth-row {
+        grid-template-columns: repeat(4, 23px) 154px 23px 23px repeat(3, 23px);
+        gap: 2px;
+    }
+
 }

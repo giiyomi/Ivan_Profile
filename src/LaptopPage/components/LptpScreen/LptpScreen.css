@@ -122,6 +122,8 @@
     position: absolute;
     right: 0;
     transform: translateX(-25%);
+    display: flex;
+    align-items: center;
 }
 
 .clseMessge-notif i:hover{
@@ -356,7 +358,7 @@
     }
 
     .desktop.chrome-icon{
-        min-height: 100px;
+        min-height: 88px;
     }
 
     .myprofile-icon{
@@ -371,7 +373,8 @@
 
 @media (max-height: 720px) {
     .myprofile-icon{
-        width: 15%;
+        height: 50%;
+        width: 20%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -380,10 +383,108 @@
     }
 
     .desktop.chrome-icon{
-        min-height: 55px;
+        min-height: 48px;
+        width: 85%;
     }
 
     .myprofile-icon h4{
         font-size: 1rem;
     }
+}
+
+@media (max-height: 670px) {
+
+    .myprofile-icon{
+        
+        height: 35%;
+    }
+
+
+    .desktop.chrome-icon{
+        min-height: 35px !important;
+    }
+
+    .myprofile-icon h4{
+        font-size: .6rem;
+        font-weight: 100 !important;
+    }
+
+    .dbleClckMeBttn {
+        height: 58%;
+        width: 30%;
+        border-radius: 2px;
+    }
+
+    .mssgeTitleToClick{
+        width: 100%;
+        position: relative;
+        padding: 5px;
+        box-shadow: 0 -5px 20px 0px rgba(20,20,20,1);
+        display: flex;
+        align-items: center;
+        gap:5px;
+    }
+    
+    .mssgeTitleToClick i{
+        font-size: .7rem;
+    }
+    
+    .mssgeTitleToClick h5{
+        margin: 0;
+        font-size: .7rem;
+        font-weight: 500;
+    }
+
+    .dbleClckMeBttn p{
+        height: max-content;
+        padding: 6px;
+        font-size: 10px;
+        font-weight: 400;
+        margin-bottom: 0;
+    }
+
+    .leftTask-bar > *{
+        width: 11% !important;
+    }
+
+    .shwhddn-container i{
+        font-size: .4rem;
+    }
+
+    .langIndicator-container{
+        margin: 0 2%;
+    }
+
+    .langIndicator-container p{
+        font-size: 5px;
+        font-weight: 200;
+    }
+
+    .batWFVol-container{
+        gap:3px
+    }
+
+    .wifi-container i, .vol-container i, .bat-container i{
+        height: 100%;
+        width: 100%;
+        font-size: .6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dtTimeNotif-container{
+        gap:3px
+    }
+
+    .dteAndTme-container p{
+        font-size: .4rem;
+        font-weight: 300;
+    }
+
+    .notifIcon-container i{
+        font-size: 9px;
+    }
+
+    
 }
