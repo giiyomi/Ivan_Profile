@@ -30,8 +30,6 @@ export default function LptpScreen(props) {
     return () => clearInterval(timer);
   }, []);
 
-  console.log(shwClckMe)
-
   useEffect(()=>{
     const updateCurrentDate = () => {
       const dateNow = new Date().toLocaleDateString()
@@ -41,10 +39,8 @@ export default function LptpScreen(props) {
     const date = setInterval(updateCurrentDate, 1000)
 
     return () => clearInterval(date)
-  })
+  },[setCurrentDate])
   
-
-
   useEffect(()=>{
     if(shwGgleChrme) {
       const shwPrflPg = setTimeout(()=>{
@@ -98,7 +94,7 @@ export default function LptpScreen(props) {
     shwGgleChrme && setShwClckMe(false) 
 
     return () => clearTimeout(timer);
-  }, [shwGgleChrme, hdClckMe]);
+  }, [shwGgleChrme, hdClckMe, shwClckMe]);
 
   const hndlMinBrwsr = () => {
     if (shwGgleChrme) {
