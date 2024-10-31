@@ -1,0 +1,390 @@
+.google-browser{
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    top:0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    
+    animation: shwngGggleBrwsr 1s;
+}
+
+@keyframes shwngGggleBrwsr {
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
+
+.browser-header{
+    height: 20%;
+    width: 100%;
+    background-color: rgb(100,100,100);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.tab-container{
+    height: 40%;
+    width: 100%;
+    background-color:black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.tab-right{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.drpDown-container, .addtab-container{
+    width: 4%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drpDownIcn-holder, .addTbIcon-holder{
+    height: 100%;
+    width: 100%;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drpDownIcn-holder:hover, .addTbIcon-holder:hover {
+    background-color: rgba(255,255,255,.5);
+    transition: background-color .5s;
+}
+
+.drpDownIcn-holder{
+    height: 60%;
+    width: 60%;
+    font-size: 9px;
+    border: 1px solid rgb(100,100,100) ;
+    border-radius: 5px;
+    background-color: rgba(100,100,100);
+}
+
+.openTab{
+    width: 25%;
+    background-color: rgb(100,100,100);
+    border: 1px solid rgb(100,100,100);
+    position: relative;
+    padding-inline: 10px;
+    border-radius: 8px 8px 0 0;
+    font-size: .6rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    gap: 5px;
+}
+
+.tab-container img{
+    height: 15px;
+    width: 15px;
+}
+
+#tabBrowser-close{
+    position: absolute;
+    right: 0;
+    transform: translateX(-50%);
+}
+
+.addTbIcon-holder{
+    height: 70%;
+    width: 70%;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+.clseMinMaxContainer{
+    height: 100%;
+    width: max-content;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-end;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.clseMinMaxContainer > *{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clseMinMaxContainer > *:hover{
+    background-color: rgba(255,255,255, .2);
+    transition: background-color .3s;
+}
+
+.maxWin-holder{
+    width: 20px;
+    font-size: .7rem;
+}
+
+.searchbar-container{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:5px;
+}
+
+.bckFrwrdRldHm-placer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px
+}
+
+.bckFrwrdRldHm{
+    height: 100%;
+    width: 20px;
+    color: rgba(255,255,255,.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bckFrwrdRldHm.reload, .bckFrwrdRldHm.home{
+    font-size: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bckFrwrdRldHm.reload i{
+    transform: rotate(45deg);
+}
+
+.searchField-placer {
+    height: 70%;
+    width: 80%;
+    padding-inline: 5px;
+    border-radius: 20px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    cursor: text;
+}
+
+.srchbar-leftsde{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.website-name{
+    height: 100%;
+    width: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    animation: typing 1s steps(15) 0s forwards, blink 1s step-end infinite 1s, stopBlink 1s step-end infinite 5s;
+    border-right: 1px solid white;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes stopBlink {
+    0% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: black;
+        animation: none; 
+    }
+}
+
+.nodeplus-icon{
+    height: 60%;
+    width: 15px;
+    border: 1px solid rgb(100,100,100);
+    border-radius: 50%;
+    background-color: rgb(100,100,100);
+    font-size: .4rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.searchbar-placer p{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-weight: 200;
+    font-size: .7rem;
+    display: flex;
+    align-items: center;
+}
+
+.srchbr-rightsde{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favoriteWeb-container{
+    height: 70%;
+    width: 18px;
+    border-radius: 50%;
+    font-size: .6rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favoriteWeb-container:hover{
+    background-color: rgba(255,255,255,.5);
+    transition: background-color .5s;
+}
+
+.prfleBrwsrIcn-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+}
+
+.prfleBrwsrIcn-container > :first-child{
+    height: 50%;
+    width: 100%;
+    border-radius: 50%;
+    background-color: black;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prfleBrwsrIcn-container > :first-child i{
+    font-size: 12px;
+}
+
+
+
+.prfleBrwsrIcn-container div{
+    height: 100%;
+    width: 20px;
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.browser-content{
+    background-position: center;
+    background-size: 100% 100%;
+    height: 80%;
+    width: 100%;
+    position: relative;
+    animation: openingProfile 1.5s forwards 7s;
+    z-index: 999 !important;
+}
+
+.ggleHmPage{
+    height: 100%;
+    width: 100%;
+    animation: shwngGggleBrwsr 1s, chngingPg forwards 5s ;
+}
+
+@keyframes chngingPg {
+    from{
+        display: flex;
+    }to{
+        display: none;
+    }
+}
+
+@keyframes openingProfile {
+    from {
+        background-color: black;
+        position: absolute;
+        opacity: 0;
+        .laptop-screen{
+            overflow: visible;
+        }
+    }
+    to {
+        background-color: black;
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        left: 0;
+        transform: translatex(10px);
+        opacity: 1;
+        transform: scale(2);
+        
+        .laptop-screen{
+            overflow: visible;
+        }
+    }
+}
+
+.loadngwbste-container{
+    visibility: none;
+    opacity: 0;
+    position: absolute;
+    color: black;
+    top: 40%;
+    left: 50%;
+    animation: isLoadingProfileWeb 2s forwards 5s;
+}
+
+.spinner-border{
+    color: black;
+}
+
+@keyframes isLoadingProfileWeb {
+    from{
+        visibility: visible;
+        opacity: 1;
+        .browser-content{
+            background: none;
+        }
+    }to{
+        opacity: 1;
+        display: none;
+        .browser-content{
+            background: none;
+        }
+    }
+}
