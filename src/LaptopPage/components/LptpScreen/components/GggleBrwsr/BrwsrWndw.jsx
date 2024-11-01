@@ -97,11 +97,6 @@ export default function GggleBrwsr(props) {
 
         <div className='browser-content'>
             <img className='ggleHmPage' src={ggleWlcmPg} alt='ggleHmePge'/>
-            <div className='loadngwbste-container'>
-                <div className="spinner-border" role="status">
-                    <span className="visually-hidden">Loading...</span>
-                </div>
-            </div>
         </div>
     </div>
   )
