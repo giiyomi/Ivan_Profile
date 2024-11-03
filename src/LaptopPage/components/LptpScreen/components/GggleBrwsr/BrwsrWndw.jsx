@@ -94,7 +94,6 @@ export default function GggleBrwsr(props) {
                 </div>
             </div>
         </div>
-
         <div className='browser-content'>
             <img className='ggleHmPage' src={ggleWlcmPg} alt='ggleHmePge'/>
         </div>

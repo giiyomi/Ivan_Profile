@@ -1,14 +1,12 @@
-.myProfile-page{
-    height: 100%;
-    width: 100%;
-    background: url('../Assets/images/Nitro_Wallpaper_2.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
-    color: white;
+.myProfile-page {
+    position: relative;
+    background-color: white;
+    color: black;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     animation: slwlyShwngProfile 1s;
+    width: 100%;
 }
 
 @keyframes slwlyShwngProfile {
@@ -21,46 +19,26 @@
 }
 
 
-.tryLang{
-    animation: tryLangdin 3s;
-}
 
-@keyframes tryLangdin {
-    0%{
-        transform: translateY(100%);
-    }50%{
-        transform: translateY(-20%);
-    }100%{
-        transform: translateY(0);
-    }
-}
 
-.portrait-bg {
-    position: relative;
-    border-radius: 50%;
-}
 
-.portrait-bg::after{
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    content: '';
-    position: absolute;
-    border: 5px solid linear-gradient(to right, red, black) 1;;
-    border-radius: 30px;
-    
-    background: url('../Assets/images/red_pcFrme2.png')no-repeat;
-    background-position: center;
-    background-size: 100% 100%;
-}
 
-.myPic{
-    border: 10px solid rgba(50,50,50,.5);
-    border-radius: 30px;
-    background: 
-    linear-gradient(transparent, transparent 10%, #ff5c59 50%, transparent 90%, transparent),
-    linear-gradient(90deg, transparent, transparent 10%, #fd0400 50%, transparent 90%, transparent);
-  
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

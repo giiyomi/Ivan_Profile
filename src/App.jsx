@@ -7,7 +7,7 @@ function App() {
   const [shwPrflePg, setShwPrflePg] = useState(false)
 
   return (
-    <div className="App">
+    <div className={`App ${shwPrflePg? 'myProfile' : ''}`}>
       {!shwPrflePg?
         <LaptopPage setShwPrflePg={setShwPrflePg}/> :
         <MyProfilePg/>
