@@ -289,7 +289,7 @@
 
 @media (max-height: 670px) {
     .lptpPg-container{
-        background: url('../Assets/images/wall_wind_bg2.jpg') center 150% / cover no-repeat;
+        background: url('../Assets/images/wall_wind_bg2.jpg') center 110% / cover no-repeat;
     }
 
     .screen-holder{
@@ -331,7 +331,6 @@
 
     .laptop-volume{
         width: 505px !important;
-        bottom:  !important;
     }
     
 }
