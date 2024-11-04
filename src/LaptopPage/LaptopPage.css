@@ -334,3 +334,18 @@
     }
     
 }
+
+@media (max-width: 600px) and (max-height:1000px) {
+    .lptpPg-container{
+        background: url('../Assets/images/lptp_pg/lptop_bg/wall_wind_bg2.jpg') center 200% / 200% 120% no-repeat;
+    }
+
+    .tablePg-container{
+        height: 35%;
+        clip-path: polygon(20% 0, 80% 0, 100% 100%, 0% 100%);
+    }
+}
+
+
+
+
