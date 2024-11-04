@@ -1,6 +1,7 @@
 .topNav-container{
     height: 70px;
     width: 100%;
+    min-height: max-content;
     position: fixed;
     top: 0;
     display: flex;
@@ -15,6 +16,7 @@
 
 .navbarBrand-container{
     height: 100%;
+    min-height: max-content;
     flex: .3;
     display: flex;
     justify-content: flex-end;
