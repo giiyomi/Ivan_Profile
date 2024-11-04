@@ -1,7 +1,7 @@
 import './BrwsrWndw.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ggleIcon from '../../../../../Assets/images/chrome_icon.png'
-import ggleWlcmPg from '../../../../../Assets/images/google-homepage.jpg'
+import ggleIcon from '../../../../../Assets/images/lptp_pg/chrome_icon.png'
+import ggleWlcmPg from '../../../../../Assets/images/lptp_pg/google-homepage.jpg'
 
 export default function GggleBrwsr(props) {
     const {setShwGgleChrme, setMinChrme, hndlMinBrwsr} = props

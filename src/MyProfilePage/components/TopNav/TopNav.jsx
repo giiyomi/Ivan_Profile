@@ -7,6 +7,7 @@ export default function TopNav() {
   const [activeSection, setActiveSection] = useState('home');
   const [shwNavTabs, setShwNavTabs] =  useState(false)
 
+  // console.log(activeSection)
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,9 +23,15 @@ export default function TopNav() {
       const sectionOffsets = {
         home: document.getElementById('home-section').offsetTop,
         about: document.getElementById('aboutMe-section').offsetTop,
+        skills: document.getElementById('skills-section').offsetTop,
+        portfolio: document.getElementById('portfolio-section').offsetTop,
       };
 
-      if (scrollPosition >= sectionOffsets.about - 50) {
+      if (scrollPosition >= sectionOffsets.portfolio - 50) {
+        setActiveSection('portfolio');
+      } else if (scrollPosition >= sectionOffsets.skills - 50) {
+        setActiveSection('skills');
+      } else if (scrollPosition >= sectionOffsets.about - 50) {
         setActiveSection('about');
       } else {
         setActiveSection('home');
@@ -38,7 +45,6 @@ export default function TopNav() {
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
 
-    // Initial check in case the width is already less than 900px on load
     handleResize();
 
     return () => {
@@ -60,7 +66,6 @@ export default function TopNav() {
       setShwNavTabs(true)
     }
   }
-
 
   return (
     <nav className={`topNav-container ${chngeColorBg ? 'scrolled' : ''}`}>

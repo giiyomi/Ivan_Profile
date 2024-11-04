@@ -4,7 +4,7 @@
     position: relative;
     border: 1px solid rgba(30,30,30,.3);
     color: white;
-    background: url('../../../Assets/images/wallpaper-acer-nitro-with-new-logo-v0-u1nulqskf5ac1.webp') no-repeat;
+    background: url('../../../Assets/images/lptp_pg/gamers_bg/wallpaper-acer-nitro-with-new-logo-v0-u1nulqskf5ac1.webp') no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
@@ -148,7 +148,7 @@
     height: 100%;
     min-height: 100px;
     width: 75%;
-    background: url('../../../Assets/images/chrome_icon.png') no-repeat;
+    background: url('../../../Assets/images/lptp_pg/chrome_icon.png') no-repeat;
     background-position: center;
     background-size:100% 100%;
     cursor: pointer;
@@ -177,14 +177,14 @@
 
 .taskbar-button.start-icon{
     width: 10%;
-    background: url('../../../Assets/images/Windows-11-Win-X-Menu-icon-removebg-preview.png') no-repeat;
+    background: url('../../../Assets/images/lptp_pg/Windows-11-Win-X-Menu-icon-removebg-preview.png') no-repeat;
     background-position: center;
     background-size: cover;
 }
 
 .taskbar-button.search-icon{
     width: 10%;
-    background: url('../../../Assets/images/images-removebg-preview.png') no-repeat;
+    background: url('../../../Assets/images/lptp_pg/images-removebg-preview.png') no-repeat;
     background-position: center;
     background-size:50% 50%;
     transition: transform 1s;
@@ -193,7 +193,7 @@
 .taskbar-button.chrome-icon{
     width: 10%;
     position: relative;
-    background: url('../../../Assets/images/chrome_icon.png') no-repeat;
+    background: url('../../../Assets/images/lptp_pg/chrome_icon.png') no-repeat;
     background-position: center;
     background-size:70% 70%;
     cursor: pointer;

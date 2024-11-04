@@ -1,7 +1,7 @@
 .lptpPg-container{
     height: 100%;
     width: 100%;
-    background: url('../Assets/images/wall_wind_bg2.jpg') center 100% / cover no-repeat;
+    background: url('../Assets/images/lptp_pg/lptop_bg/wall_wind_bg2.jpg') center 100% / cover no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -289,7 +289,7 @@
 
 @media (max-height: 670px) {
     .lptpPg-container{
-        background: url('../Assets/images/wall_wind_bg2.jpg') center 110% / cover no-repeat;
+        background: url('../Assets/images/lptp_pg/lptop_bg/wall_wind_bg2.jpg') center 110% / cover no-repeat;
     }
 
     .screen-holder{
