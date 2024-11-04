@@ -161,6 +161,7 @@
     }
 
     .navbarBrand-container{
+        height: max-content;
         width: 80%;
         display: flex;
         justify-content: space-between;
@@ -242,6 +243,7 @@
     }
 
     .navbarTabs-placer{
+        height: max-content;
         width: 85%;
         animation: navGoingDown .3s ease-in-out forwards;
     }
