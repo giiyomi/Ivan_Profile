@@ -222,10 +222,13 @@
     }
 
     .navbarTabs-container{
+        height: max-content;
+        width: 100%;
         display: none;
     }
 
     .navbarTabs-container.active{
+        height: max-content;
         width: 100%;
         flex: 1;
         display: flex;
