@@ -177,7 +177,7 @@
 
 }
 
-@media (max-height:670px) {
+@media (max-height:670px), (max-width: 950px) {
 
     .mechanical-keyboard{
         padding: 2px;

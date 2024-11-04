@@ -287,7 +287,7 @@
 
 }
 
-@media (max-height: 670px) {
+@media (max-height: 670px), (max-width: 950px) {
     .lptpPg-container{
         background: url('../Assets/images/lptp_pg/lptop_bg/wall_wind_bg2.jpg') center 110% / cover no-repeat;
     }
