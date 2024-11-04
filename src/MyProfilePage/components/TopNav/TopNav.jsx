@@ -1,13 +1,27 @@
 import './TopNav.css';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef,  useCallback } from 'react';
 import navBrandName from '../../../Assets/images/navBrand-removebg-preview.png';
 
 export default function TopNav() {
   const [chngeColorBg, setChngeColorBg] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [shwNavTabs, setShwNavTabs] =  useState(false)
+  const navRef = useRef(null);
 
   // console.log(activeSection)
+
+  const handleShowTabs = useCallback(() => {
+    if (shwNavTabs) {
+      document.querySelector('.navbarTabs-placer').classList.add('closing');
+
+      setTimeout(() => {
+        setShwNavTabs(false);
+        document.querySelector('.navbarTabs-placer').classList.remove('closing');
+      }, 400);
+    } else {
+      setShwNavTabs(true);
+    }
+  }, [shwNavTabs]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -42,33 +56,27 @@ export default function TopNav() {
       }
     };
 
+    const handleClickOutside = (event) => {
+      if (navRef.current && !navRef.current.contains(event.target) && shwNavTabs) {
+        handleShowTabs();
+      }
+    };
+
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
+    document.addEventListener('click', handleClickOutside);
 
     handleResize();
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
+      document.removeEventListener('click', handleClickOutside); 
     };
-  }, []);
-
-  const handleShowTabs = () => {
-    if (shwNavTabs) {
-      document.querySelector('.navbarTabs-placer').classList.add('closing');
-
-      setTimeout(()=>{
-        setShwNavTabs(false)
-        document.querySelector('.navbarTabs-placer').classList.remove('closing');
-      },[400])
-
-    }  else {
-      setShwNavTabs(true)
-    }
-  }
+  }, [handleShowTabs, shwNavTabs]);
 
   return (
-    <nav className={`topNav-container ${chngeColorBg ? 'scrolled' : ''}`}>
+    <nav className={`topNav-container ${chngeColorBg ? 'scrolled' : ''}`} ref={navRef}>
       <div className='navbarBrand-container'>
         <span className='navbarBrand-placer'>    
           <img className='mybrand_name' src={navBrandName} alt='my_name'/>
@@ -80,7 +88,6 @@ export default function TopNav() {
       </div>
 
       <div className={`navbarTabs-container ${shwNavTabs? 'active' : ''}`}>
-
 
         <div className='navbarTabs-placer'>
           
