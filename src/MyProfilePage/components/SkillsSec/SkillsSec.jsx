@@ -9,7 +9,14 @@ export default function SkillsSec() {
   return (
     <div className='skills-section' id='skills-section'>
         <div className='skills-list-container'>
-            <h1>Skills</h1>
+            <div className='skillList-header'>
+                <h1 className='skills-title'> Skills</h1>
+                <p className='sklls-explntn'>
+                    Proficient in web technologies, data tools, and backend frameworks,
+                    with a versatile skill set for building functional,
+                    data-driven applications.
+                </p>
+            </div>
             <div className='skills-list'>
             
                 <div className='skllPrfcncy-container'>

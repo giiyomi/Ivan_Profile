@@ -13,11 +13,20 @@
     height: 100%;
     max-height: max-content;
     width: 100%;
-    padding: 3% 5%;
+    padding: 5% 15%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap:50px;
+    gap:60px;
+}
+
+.skills-title{
+    margin-bottom: 25px;
+}
+
+.sklls-explntn{
+    color: rgb(120,120,120);
+    
 }
 
 .skills-list{
@@ -68,11 +77,14 @@
     font-size: 20px;
 }
 
-@media (max-width:950px) {
+@media (max-width:1200px) {
     .skills-list-container{
         padding: 8% 5%;
         gap:40px !important;
     }
+}
+
+@media (max-width:950px) {
     
     .skllPrfcncy{
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));

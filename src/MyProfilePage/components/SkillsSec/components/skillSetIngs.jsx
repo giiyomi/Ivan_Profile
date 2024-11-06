@@ -21,7 +21,7 @@ import API_icon from './../../../../Assets/images/myPrfle_pg/skills/API_icon.png
 const skillsImages = [
   { name: 'HTML', src: HTML_logo, proficiency: 'good' },
   { name: 'CSS', src: CSS_logo, proficiency: 'good' },
-  { name: 'JS', src: JS_logo, proficiency: 'good' },
+  { name: 'JAVASCRIPT', src: JS_logo, proficiency: 'good' },
   { name: 'ReactJS', src: REACTJS_logo, proficiency: 'good' },
   { name: 'RUBY', src: RUBY_logo, proficiency: 'good' },
   { name: 'RAILS', src: RAILS_logo, proficiency: 'good' },
