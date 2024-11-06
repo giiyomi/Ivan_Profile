@@ -6,21 +6,21 @@ import MyProfilePg from './MyProfilePage/MyProfilePg';
 function App() {
   const [shwPrflePg, setShwPrflePg] = useState(false)
 
-  // useEffect(() => {
-  //   const handleResize = () => window.innerWidth < 950 ? setShwPrflePg(true) : setShwPrflePg(false);
+  useEffect(() => {
+    const handleResize = () => window.innerWidth < 950 ? setShwPrflePg(true) : setShwPrflePg(false);
 
-  //   handleResize();
+    handleResize();
 
-  //   window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', handleResize);
 
-  //   return () => {
-  //     window.removeEventListener('resize', handleResize);
-  //   };
-  // }, []);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
-    <div className={`App ${shwPrflePg? '' : 'myProfile'}`}>
-      {shwPrflePg?
+    <div className={`App ${shwPrflePg? 'myProfile' : ''}`}>
+      {!shwPrflePg?
         <LaptopPage setShwPrflePg={setShwPrflePg}/> :
         <MyProfilePg/>
       }
