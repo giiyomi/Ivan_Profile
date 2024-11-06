@@ -36,11 +36,11 @@ import bank_and_budget_app34 from '../../../../../../../Assets/images/Project Pi
 import bank_and_budget_app35 from '../../../../../../../Assets/images/Project Pics/bank_and_budget_app/Bank_and_budget_app35.jpg';
 import bank_and_budget_app36 from '../../../../../../../Assets/images/Project Pics/bank_and_budget_app/Bank_and_budget_app36.jpg';
 import bank_and_budget_app37 from '../../../../../../../Assets/images/Project Pics/bank_and_budget_app/Bank_and_budget_app37.jpg';
-import bank_and_budget_app_vid from '../../../../../../../Assets/images/Project Pics/bank_and_budget_app/Bank_and_budget_app.mp4';
+// import bank_and_budget_app_vid from '../../../../../../../Assets/images/Project Pics/bank_and_budget_app/Bank_and_budget_app.mp4';
 
 const Bank_and_budget_app = [
     bank_and_budget_app,
-    bank_and_budget_app_vid,
+    // bank_and_budget_app_vid,
     bank_and_budget_app1,
     bank_and_budget_app2,
     bank_and_budget_app3,
