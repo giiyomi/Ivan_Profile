@@ -5,6 +5,7 @@ import Momentum_app from './projects/momentum_app/momentum_app'
 import TicTacToe from './projects/ticTacToe/ticTacToe';
 import Bank_and_budget_app from './projects/bank_budget/bank_budget'
 import My_profile from './projects/my_profile/my_profile';
+import Journal_app from './projects/journal_app/journal_app';
 
 const projectList = [
     {
@@ -56,6 +57,14 @@ const projectList = [
         category: 'react',
         description: 'This is a personal profile website created in React, featuring a clean, user-friendly interface with interactive elements. The site is organized into tabs for Home, About Me, Skills, Portfolio, and Contact Me, offering a seamless browsing experience. Each section has been thoughtfully designed to be visually appealing and functional, and the website is fully responsive, ensuring accessibility across various devices.'
     },
+    {
+        name: 'Journal App',
+        src: Journal_app,
+        link: 'https://github.com/giiyomi/Journal_App.git',
+        category: 'rails',
+        description: `The Journal App is a task management system built with Ruby on Rails, allowing users to create, edit, and view categories and tasks. It helps users organize tasks by category and prioritize their daily activities with a "Today's Tasks" feature. Users can also delete tasks as needed. The app uses Devise for secure user authentication, enabling account creation and task linking. Although not responsive, the app provides a simple and effective way to manage tasks and stay organized.`
+    }
 ].map((project, index) => ({ ...project, id: index + 1 }));
 
 export default projectList
+

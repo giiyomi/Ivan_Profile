@@ -1,5 +1,5 @@
 import './WbDetails.css'
-import { useRef, useEffect, useState } from 'react'
+import { useRef, useEffect, useState, useCallback } from 'react'
 import projectList from '../prjctsList/prjctsList'
 
 
@@ -12,17 +12,17 @@ export default function WbDetails(props) {
   const dotsForImagesRef = useRef()
   const clickedWebsite = projectList.find(project => project.name === prjctName[0] && project.description === prjctName[1])
 
-  const prevImage = () => {
+  const prevImage = useCallback(() => {
     if (imgIndex > 0) {
       setImgIndex(prevIndex => prevIndex - 1);
     }
-  };
+  }, [imgIndex]);
 
-  const nextImage = () => {
+  const nextImage = useCallback(() => {
     if (imgIndex < clickedWebsite.src.length - 1) {
       setImgIndex(prevIndex => prevIndex + 1);
     }
-  };
+  }, [imgIndex, clickedWebsite.src.length]);
 
   useEffect(() => {
     const checkOverflow = () => {
@@ -70,11 +70,26 @@ export default function WbDetails(props) {
     
   };
 
-
   const isVideo = (filePath) => {
     const videoExtensions = ['.mp4', '.avi', '.mov', '.wmv', '.flv'];
     return videoExtensions.some(extension => filePath.toLowerCase().endsWith(extension));
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.key === 'ArrowLeft') {
+        prevImage();
+      } else if (event.key === 'ArrowRight') {
+        nextImage();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [imgIndex, nextImage, prevImage]);
 
 
   return (

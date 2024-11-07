@@ -4,19 +4,19 @@ import LaptopPage from './LaptopPage/LaptopPage'
 import MyProfilePg from './MyProfilePage/MyProfilePg';
 
 function App() {
-  const [shwPrflePg, setShwPrflePg] = useState(false)
+  const [shwPrflePg, setShwPrflePg] = useState(true)
 
-  useEffect(() => {
-    const handleResize = () => window.innerWidth < 950 ? setShwPrflePg(true) : setShwPrflePg(false);
+  // useEffect(() => {
+  //   const handleResize = () => window.innerWidth < 950 ? setShwPrflePg(true) : setShwPrflePg(false);
 
-    handleResize();
+  //   handleResize();
 
-    window.addEventListener('resize', handleResize);
+  //   window.addEventListener('resize', handleResize);
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
 
   return (
     <div className={`App ${shwPrflePg? 'myProfile' : ''}`}>
