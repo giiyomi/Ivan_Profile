@@ -1,11 +1,11 @@
-import momentum_app from '../../../../../../../Assets/images/Project Pics/momentum_app/Momentum_app.jpg'
-import momentum_app1 from '../../../../../../../Assets/images/Project Pics/momentum_app/Momentum_app1.jpg'
-import momentum_app2 from '../../../../../../../Assets/images/Project Pics/momentum_app/Momentum_app2.jpg'
-import momentum_app3 from '../../../../../../../Assets/images/Project Pics/momentum_app/Momentum_app3.jpg'
-import momentum_app4 from '../../../../../../../Assets/images/Project Pics/momentum_app/Momentum_app4.jpg'
+import momentum_app from '../../../../../../../Assets/images/projects_pics/react_js/momentum_app/Momentum_app.jpg'
+import momentum_app1 from '../../../../../../../Assets/images/projects_pics/react_js/momentum_app/Momentum_app1.jpg'
+import momentum_app2 from '../../../../../../../Assets/images/projects_pics/react_js/momentum_app/Momentum_app2.jpg'
+import momentum_app3 from '../../../../../../../Assets/images/projects_pics/react_js/momentum_app/Momentum_app3.jpg'
+import momentum_app4 from '../../../../../../../Assets/images/projects_pics/react_js/momentum_app/Momentum_app4.jpg'
 
-// import momentum_app5_video from '../../../../../../../Assets/images/Project Pics/momentum_app/Momentum_app5.mp4'
-// import momentum_app6_video from '../../../../../../../Assets/images/Project Pics/momentum_app/Momentum_app6.mp4'
+// import momentum_app5_video from '../../../../../../../Assets/images/projects_pics/react_js/momentum_app/Momentum_app5.mp4'
+// import momentum_app6_video from '../../../../../../../Assets/images/projects_pics/react_js/momentum_app/Momentum_app6.mp4'
 
 
 const Momentum_app = [
