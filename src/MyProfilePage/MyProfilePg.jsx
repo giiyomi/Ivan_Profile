@@ -6,6 +6,7 @@ import AbtmeSec from './components/AbtmeSec/AbtmeSec'
 import SkillsSec from './components/SkillsSec/SkillsSec'
 import PrtfolioSec from './components/PrtfolioSec/PrtfolioSec'
 import WbDetails from './components/PrtfolioSec/components/WbDetails/WbDetails'
+import CntactSec from './components/CntactSec/CntactSec'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function MyProfilePg() {
@@ -22,7 +23,6 @@ export default function MyProfilePg() {
         setShwVwWbDtls={setShwVwWbDtls}
         setPrjctName={setPrjctName}
       />
-      
       {shwVwWbDtls && 
         <WbDetails
         setShwVwWbDtls={setShwVwWbDtls}
@@ -30,6 +30,24 @@ export default function MyProfilePg() {
         prjctName={prjctName}
         />
       }
+      <CntactSec/>
+      <div className='copyright-container'>
+        <div className='copyright-placer'>
+          <p className='footer-links-container'>
+            <a href='#home-section'>HOME</a>
+            <a href='#aboutMe-section'>ABOUT</a>
+            <a href='#skills-section'>SKILLS</a>
+            <a href='#portfolio-section'>PORTFOLIO</a>
+            <a href='#contactMe-section'>CONNECT</a>
+          </p>
+        </div>
+        <div className='copyright-placer'>
+          <p className='footer-designer-name'> <span>All Rights Reserved. © 2024 <a href='https://ivanlang.netlify.app/' target="_blank" rel="noreferrer">Ivan</a> </span><span>Github Account : <a href='https://github.com/giiyomi' target="_blank" rel="noreferrer">Giiyomi</a></span>
+          </p>
+        </div>
+
+      </div>
+
 
     </div>
   )

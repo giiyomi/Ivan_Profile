@@ -8,6 +8,7 @@ export default function WbDetails(props) {
   const {setShwVwWbDtls, setPrjctName, prjctName} = props
   const [imgIndex, setImgIndex] = useState(0)
   const [isOverflowing, setIsOverflowing] = useState(false)
+  const [showAngleDown, setShowAngleDown] = useState(true);
   const outsideWbDtlsWndw = useRef()
   const dotsForImagesRef = useRef()
   const clickedWebsite = projectList.find(project => project.name === prjctName[0] && project.description === prjctName[1])
@@ -23,6 +24,56 @@ export default function WbDetails(props) {
       setImgIndex(prevIndex => prevIndex + 1);
     }
   }, [imgIndex, clickedWebsite.src.length]);
+
+  const scrollToBottom = () => {
+    const windowElement = outsideWbDtlsWndw.current;
+    if (windowElement) {
+      windowElement.scrollTo({
+        top: windowElement.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const checkVerticalOverflow = () => {
+    const windowElement = outsideWbDtlsWndw.current;
+
+    if (windowElement) {
+      const isVerticallyOverflowing = windowElement.scrollHeight > (windowElement.clientHeight + 50);
+      isVerticallyOverflowing ? setShowAngleDown(true) : setShowAngleDown(false)
+    }
+  };
+
+  const checkScrollPosition = () => {
+    const windowElement = outsideWbDtlsWndw.current;
+    if (windowElement) {
+      const isScrolledToBottom = windowElement.scrollHeight - windowElement.scrollTop <= (windowElement.clientHeight + 50);
+      setShowAngleDown(!isScrolledToBottom);
+    }
+  };
+
+useEffect(() => {
+  checkVerticalOverflow();
+  checkScrollPosition();
+  
+  window.addEventListener('resize', () => {
+    checkVerticalOverflow();
+    checkScrollPosition(); // Also check scroll position on resize
+  });
+
+  const windowElement = outsideWbDtlsWndw.current;
+  windowElement && windowElement.addEventListener('scroll', checkScrollPosition);
+
+  return () => {
+    window.removeEventListener('resize', () => {
+      checkVerticalOverflow();
+      checkScrollPosition();
+    });
+    windowElement.removeEventListener('scroll', checkScrollPosition);
+  };
+}, []);
+
+  
 
   useEffect(() => {
     const checkOverflow = () => {
@@ -133,14 +184,22 @@ export default function WbDetails(props) {
                 <div className='wbstDtails'>
                   <h2>{clickedWebsite.name}</h2>
                   <p className='url-container'>
-                    <b>URL:</b> <a href={clickedWebsite.link} target="_blank" rel="noopener noreferrer">{clickedWebsite.link}</a>
+                    <b>URL:</b> <a href={clickedWebsite.web_link} target="_blank" rel="noopener noreferrer">{clickedWebsite.web_link}</a>
                   </p>
                   <p className='wbsteExplntn'>{clickedWebsite.description}</p>
+                  <div className='goTogitHub-button-container'>
+                    <a href={clickedWebsite.github_link} target='_blank' rel='noopener noreferrer'>
+                      <button>Go to GitHub link</button>
+                    </a>
+                  </div>
                 </div>
+
+
               </div>
-              {/* <div className='wbstDetails-container'>
-                Details
-              </div> */}
+              {showAngleDown &&
+                <div className='proj-details-angleDown' onClick={scrollToBottom}>
+                  <i class="bi bi-arrow-down-circle-fill"></i>
+                </div>}
             </div>
 
 

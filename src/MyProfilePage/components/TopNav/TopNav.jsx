@@ -41,7 +41,9 @@ export default function TopNav() {
         portfolio: document.getElementById('portfolio-section').offsetTop,
       };
 
-      if (scrollPosition >= sectionOffsets.portfolio - 50) {
+      if (scrollPosition >= sectionOffsets.contact - 50) {
+        setActiveSection('contact');
+      } else if (scrollPosition >= sectionOffsets.portfolio - 50) {
         setActiveSection('portfolio');
       } else if (scrollPosition >= sectionOffsets.skills - 50) {
         setActiveSection('skills');
@@ -101,10 +103,10 @@ export default function TopNav() {
             <a href="#skills-section" onClick={handleShowTabs}>
               <li className={activeSection === 'skills' ? 'active' : ''}>SKILLS</li>
             </a>
-            <a href="#portfolio-section">
+            <a href="#portfolio-section" onClick={handleShowTabs}>
               <li className={activeSection === 'portfolio' ? 'active' : ''}>PORTFOLIO</li>
             </a>
-            <a href="#contact-section">
+            <a href="#contactMe-section" onClick={handleShowTabs}>
               <li className={activeSection === 'contact' ? 'active' : ''}>CONTACT ME</li>
             </a>
           </ul>
