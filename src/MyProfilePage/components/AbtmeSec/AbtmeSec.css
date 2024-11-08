@@ -30,7 +30,7 @@
     width: 100%;
     margin-bottom: 30px;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 100 !important;
+    font-weight: 200 !important;
     font-size: 40px;
     display: flex;
 }
@@ -78,7 +78,7 @@
     overflow: hidden;
 }
 
-.dLcv-placer button::after{
+.download-cv::after{
     top:0;
     left:0px;
     width: 100%;
@@ -100,14 +100,6 @@
     transform: translateX(0);
     opacity: 1;
     visibility: visible;
-}
-
-@keyframes dlCvMoveFromLeft {
-    from{
-        transform: translateX(-10%);
-    }to{
-        transform: translateX(0);
-    }
 }
 
 @media (max-width:1200px) {

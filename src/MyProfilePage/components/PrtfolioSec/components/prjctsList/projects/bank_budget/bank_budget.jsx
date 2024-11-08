@@ -36,11 +36,20 @@ import bank_and_budget_app34 from '../../../../../../../Assets/images/projects_p
 import bank_and_budget_app35 from '../../../../../../../Assets/images/projects_pics/react_js/bank_and_budget_app/Bank_and_budget_app35.jpg';
 import bank_and_budget_app36 from '../../../../../../../Assets/images/projects_pics/react_js/bank_and_budget_app/Bank_and_budget_app36.jpg';
 import bank_and_budget_app37 from '../../../../../../../Assets/images/projects_pics/react_js/bank_and_budget_app/Bank_and_budget_app37.jpg';
-// import bank_and_budget_app_vid from '../../../../../../../Assets/images/projects_pics/react_js/bank_and_budget_app/Bank_and_budget_app.mp4';
+
+import bank_and_budget_app_vid from '../../../../../../../Assets/images/projects_pics/react_js/bank_and_budget_app/Bank_and_budget_app.mp4';
+import bank_and_budget_app_vid1 from '../../../../../../../Assets/images/projects_pics/react_js/bank_and_budget_app/Bank_and_budget_app1.mp4';
+import bank_and_budget_app_vid2 from '../../../../../../../Assets/images/projects_pics/react_js/bank_and_budget_app/Bank_and_budget_app2.mp4';
+import bank_and_budget_app_vid3 from '../../../../../../../Assets/images/projects_pics/react_js/bank_and_budget_app/Bank_and_budget_app3.mp4';
+import bank_and_budget_app_vid4 from '../../../../../../../Assets/images/projects_pics/react_js/bank_and_budget_app/Bank_and_budget_app4.mp4';
 
 const Bank_and_budget_app = [
     bank_and_budget_app,
-    // bank_and_budget_app_vid,
+    bank_and_budget_app_vid,
+    bank_and_budget_app_vid1,
+    bank_and_budget_app_vid2,
+    bank_and_budget_app_vid3,
+    bank_and_budget_app_vid4,
     bank_and_budget_app1,
     bank_and_budget_app2,
     bank_and_budget_app3,

@@ -37,7 +37,8 @@
     background-color: white;
     font-family: 'Roboto Mono', monospace;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
     animation: poppingOutWbDtls .3s ease-in-out forwards;
     overflow-y: auto;
@@ -293,6 +294,41 @@
     line-height: 30px;
 }
 
+.goTogitHub-button-container{
+    width: 100%;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+
+.proj-details-angleDown{
+    position: sticky;
+    left: 47%;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.proj-details-angleDown i{
+    font-size: 50px;
+    color: rgba(0,0,0,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bouncing-angleDown 1s infinite ease-in-out;
+}
+
+@keyframes bouncing-angleDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
 
 @media (max-width: 950px) {
     .wbDtls-window{
@@ -363,6 +399,14 @@
 
     .url-container a{
         font-size: 12px;
+    }
+
+    .proj-details-angleDown{
+        left: 47%;
+    }
+    
+    .proj-details-angleDown i{
+        font-size: 40px;
     }
 }
 
@@ -505,6 +549,14 @@
     .url-container a{
         font-size: 12px;
         word-break: break-all;
+    }
+
+    .proj-details-angleDown{
+        left: 45%;
+    }
+    
+    .proj-details-angleDown i{
+        font-size: 30px;
     }
 
 }

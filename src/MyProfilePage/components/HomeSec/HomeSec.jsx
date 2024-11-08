@@ -26,7 +26,7 @@ export default function HomeSec() {
                     <p>"Inspired by my passion for technology, I am steadfast in chasing my dreams."</p>
                     <h3 className='chngingSkills-container'>
                         <span className='chngingSkills'>
-                            As I strive to become as <span className='showSkill-container'>
+                            As I strive to become as a<span className='showSkill-container'>
                                 <b className={`${numb === 1? 'showSkill' : 'hideSkill'}`}>WEB DEVELOPER</b>
                                 <b className={`${numb === 2? 'showSkill' : 'hideSkill'}`}>WEB DESIGNER</b>
                                 <b className={`${numb === 3? 'showSkill' : 'hideSkill'}`}>SOFTWARE ENGINEER</b>

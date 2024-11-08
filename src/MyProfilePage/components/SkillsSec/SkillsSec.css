@@ -21,12 +21,14 @@
 }
 
 .skills-title{
+    font-size: 40px;
     margin-bottom: 25px;
 }
 
 .sklls-explntn{
     color: rgb(120,120,120);
-    
+    font-size: 20px;
+    line-height: 33px;
 }
 
 .skills-list{
@@ -101,13 +103,30 @@
     
 }
 
-@media (max-width:650px) {
+@media (max-width:700px) {
     .skills-list-container{
         gap:30px !important;
+    }
+
+    .skills-title{
+        font-size: 35px;
+    }
+
+    .sklls-explntn{
+        font-size: 1rem;
     }
 }
 
 @media (max-width:510px) {
+
+    .skills-title{
+        font-size: 30px;
+    }
+
+    .sklls-explntn{
+        font-size: 14px;
+    }
+
     .skllPrfcncy{
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
         column-gap: 5%;
