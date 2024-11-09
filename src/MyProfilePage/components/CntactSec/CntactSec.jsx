@@ -22,7 +22,7 @@ export default function CntactSec() {
                 </div>
             </div>
             <div className='sndMessgeButtn-container'>
-                <button type='submit'>Send Message</button>
+                <button type='submit' onClick={e => e.preventDefault()}>Send Message</button>
             </div>
             </form>
 
