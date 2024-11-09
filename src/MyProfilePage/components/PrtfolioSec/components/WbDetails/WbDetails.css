@@ -301,6 +301,13 @@
 }
 
 
+.goTogitHub-button-container a button{
+    padding: 4px 10px;
+    color: black;
+    background-color: rgba(50,50,50,.1);
+}
+
+
 .proj-details-angleDown{
     position: sticky;
     left: 47%;
