@@ -112,6 +112,7 @@
 
 .sndMessgeButtn-container button{
     height: 50px;
+    background-color: rgba(50,50,50,.1);
     position: relative;
     padding-inline: 18px ;
     border: 1px solid rgb(50, 50, 50);
@@ -215,6 +216,9 @@
         min-width: 300px;
     }
     
+    .footer-designer-name{
+        margin: 0;
+    }
 }
 
 @media (max-width:420px) {
@@ -229,6 +233,7 @@
         min-width: 250px;
         padding-inline: 0;
     }
+
 }
 
 @media (max-width:350px) {
@@ -236,5 +241,10 @@
     .yourMessage-container{
         min-width: 200px;
         padding-inline: 0;
+    }
+
+    
+    .footer-designer-name{
+        text-align: center;
     }
 }

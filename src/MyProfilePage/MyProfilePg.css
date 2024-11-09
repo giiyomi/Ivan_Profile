@@ -40,10 +40,15 @@
     margin-right: 5px;
 }
 
+
 .footer-links-container, .footer-designer-name{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+.footer-links{
+    line-height: 33px;
 }
 
 .footer-links-container a{
@@ -51,22 +56,21 @@
     text-decoration: none;
     font-size: 1rem;
     font-weight: 300;
-    color: rgba(100,100,100,.6);
+    color: rgba(180,180,180,.6);
     cursor: pointer;
     transition: all .3s;
 }
-
 
 
 .footer-links-container a:hover{
     color: rgba(100,100,100,.1);
 }
 
-.footer-links-container > :first-child{
+.footer-links.left > :first-child{
     margin-left:0;
 }
 
-.footer-links-container > :last-child{
+.footer-links.right > :last-child{
     margin-right:0;
 }
 
@@ -105,3 +109,4 @@
         padding: 25px 0;
     }
 }
+

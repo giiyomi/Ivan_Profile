@@ -34,11 +34,15 @@ export default function MyProfilePg() {
       <div className='copyright-container'>
         <div className='copyright-placer'>
           <p className='footer-links-container'>
-            <a href='#home-section'>HOME</a>
-            <a href='#aboutMe-section'>ABOUT</a>
-            <a href='#skills-section'>SKILLS</a>
-            <a href='#portfolio-section'>PORTFOLIO</a>
-            <a href='#contactMe-section'>CONNECT</a>
+            <div className='footer-links left'>
+              <a href='#home-section'>HOME</a>
+              <a href='#aboutMe-section'>ABOUT</a>
+              <a href='#skills-section'>SKILLS</a>
+            </div>
+            <div className='footer-links right'>
+              <a href='#portfolio-section'>PORTFOLIO</a>
+              <a href='#contactMe-section'>CONNECT</a>
+            </div>
           </p>
         </div>
         <div className='copyright-placer'>
