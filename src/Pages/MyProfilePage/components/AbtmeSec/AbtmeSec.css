@@ -1,0 +1,195 @@
+.aboutMe-section{
+    height: 100vh;
+    min-height: 730px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5
+}
+
+.aboutMe-placer{
+    height: 100vh;
+    width: 100%;
+    padding-inline: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abtMe-field{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.abtMe-field h2{
+    width: 100%;
+    margin-bottom: 30px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200 !important;
+    font-size: 40px;
+    display: flex;
+}
+
+.abtMe-field p{
+    margin-bottom: 30px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100 !important;
+    line-height: 26px;
+    color: rgb(120,120,120);
+}
+
+.abMe-myPic{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.abMe-myPic img{
+    height: 60%;
+    min-height: 430px;
+    box-shadow: 25px 25px 0px ;
+}
+
+.myPic{
+    display: none;
+}
+
+.dLcv-placer{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.dLcv-placer button{
+    position: relative;
+    border: 1px solid rgba(30,30,30,.4);
+    padding: 10px 15px;
+    background: none;
+    color: rgb(0,0,0);
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200;
+    transition: all .5s;
+    overflow: hidden;
+}
+
+.download-cv::after{
+    top:0;
+    left:0px;
+    width: 100%;
+    content: "Download CV";
+    position: absolute;
+    padding: 10px 15px;
+    background: rgba(30,30,30,.9);
+    color: white;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 200;
+    transform: translateX(-5%);
+    opacity: 0;
+    visibility: hidden; 
+    transition: all .5s;
+
+}
+
+.dLcv-placer button:hover::after {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width:1200px) {
+    .aboutMe-placer{
+        padding-inline: 5%;
+    }
+}
+
+@media (max-width:950px) {
+
+    .aboutMe-section{
+        height: max-content;
+        margin: 5% 0;
+    }
+
+    .aboutMe-placer{
+        height: max-content;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content:center ;
+    }
+
+    .abtMe-field{
+        width: 90%;
+    }
+
+    .abtMe-field h2{
+        display: flex;
+        justify-content: center;
+    }
+
+    .abMe-myPic{
+        width: 100% ;
+        margin-top:5%;
+    }
+
+    .abMe-myPic img{
+        display: none;
+    }
+
+    .myPic{
+        height: 360px;
+        width: 300px;
+        display: block;
+        box-shadow: 20px 20px 0px ;
+        background: url('../../../../Assets/images/mygrad_pic.png') center 0 / 100% 100% no-repeat;
+    }
+
+    .dLcv-placer{
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media (max-width:650px) {
+
+    .aboutMe-section{
+        margin-bottom: 10%;
+    }
+
+    .abtMe-field h2{
+        font-size: 35px;
+    }
+
+    .abtMe-field p {
+        font-size: 14px;
+    }
+
+    .abMe-myPic{
+        width: 100%;
+    }
+    
+    .abMe-myPic img{
+        width: 80%;
+    }
+}
+
+@media (min-height:951px) and (min-width:951px) {
+    .aboutMe-section, .aboutMe-placer{
+        height: max-content;
+        width: 100%;
+    }
+
+    .abMe-myPic img{
+        height: 20% ;
+        min-height: 200px;
+        width:  50%;
+    }
+}
+
+/*1024 1366*/

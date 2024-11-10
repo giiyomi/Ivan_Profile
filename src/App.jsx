@@ -1,7 +1,7 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import LaptopPage from './LaptopPage/LaptopPage'
-import MyProfilePg from './MyProfilePage/MyProfilePg';
+import LaptopPage from './Pages/LaptopPage/LaptopPage'
+import MyProfilePg from './Pages/MyProfilePage/MyProfilePg';
 
 function App() {
   const [shwPrflePg, setShwPrflePg] = useState(false)
