@@ -10,17 +10,17 @@ const SubmitInterest = {
             const headers = {
                 Authorization: `Bearer ${token}`,
             }
-            console.log(headers)
-            console.log(clientDetails)
+            // console.log(headers)
+            // console.log(clientDetails)
             const response = await axios.post({remote_api_url}, {client_detail: clientDetails}, { headers })
             const {data} = response
-            console.log(data)
+            // console.log(data)
             if(data){
                 return alert("Your interest is submitted.");
             }
         } catch (error) {
             if (error.response) {
-                console.log(error.response)
+                // console.log(error.response)
                 alert("Please submit your details again.");
             }
         }
