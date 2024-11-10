@@ -10,6 +10,8 @@ const SubmitInterest = {
             const headers = {
                 Authorization: `Bearer ${token}`,
             }
+            console.log(remote_api_url)
+            console.log(bearer_token)
             // console.log(headers)
             // console.log(clientDetails)
             const response = await axios.post({remote_api_url}, {client_detail: clientDetails}, { headers })
