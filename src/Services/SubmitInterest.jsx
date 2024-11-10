@@ -4,7 +4,7 @@ import { LOCAL_API_URL } from "../Constants/remoteConstants";
 const SubmitInterest = {
     sendDetails: async (clientDetails) => {
         try {
-            const remote_api_url = process.env.REMOTE_API_URL
+            const remote_api_url = process.env.REACT_APP_REMOTE_API_URL
             const bearer_token = process.env.REACT_APP_API_TOKEN;
             const token = bearer_token? bearer_token : null
             const headers = {
