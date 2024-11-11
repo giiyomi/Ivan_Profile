@@ -14,7 +14,7 @@ const SubmitInterest = {
             // console.log(clientDetails)
             const response = await axios.post(`${REMOTE_API_URL}/send-message`, {client_detail: clientDetails}, { headers })
             const {data} = response
-            console.log(data)
+            // console.log(data)
             if(data){
                 return alert("Your interest is submitted.");
             }
