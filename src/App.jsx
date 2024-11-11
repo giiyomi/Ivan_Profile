@@ -7,7 +7,14 @@ function App() {
   const [shwPrflePg, setShwPrflePg] = useState(false)
 
   useEffect(() => {
-    const handleResize = () => window.innerWidth < 950 ? setShwPrflePg(true) : setShwPrflePg(false);
+    const doneWithLaptopView = localStorage.getItem('laptopView')
+
+    if (doneWithLaptopView) {
+      setShwPrflePg(true);
+    }
+
+    const handleResize = () => setShwPrflePg(doneWithLaptopView || window.innerWidth < 950);
+
 
     handleResize();
 
@@ -22,7 +29,7 @@ function App() {
     <div className={`App ${shwPrflePg? 'myProfile' : ''}`}>
       {!shwPrflePg?
         <LaptopPage setShwPrflePg={setShwPrflePg}/> :
-        <MyProfilePg/>
+        <MyProfilePg  />
       }
       
     </div>

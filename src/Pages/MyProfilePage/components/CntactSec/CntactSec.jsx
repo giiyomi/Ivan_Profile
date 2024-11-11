@@ -2,13 +2,13 @@ import './CntactSec.css'
 import { useState } from 'react'
 import SubmitInterest from '../../../../Services/SubmitInterest'
 
-export default function CntactSec() {
+export default function CntactSec({setIsLoading}) {
     const [clientName, setClientName] =  useState('')
     const [clientEmail, setClientEmail] =  useState('')
     const [clientPhone, setClientPhone] =  useState('')
     const [clientMessage, setClientMessage] =  useState('')
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
         console.log('Thank you for your interest!')
 
@@ -19,11 +19,8 @@ export default function CntactSec() {
             message:  clientMessage
         }
 
-        SubmitInterest.sendDetails(clientDetails)
+        await SubmitInterest.sendDetails(clientDetails, setIsLoading)
     }
-
-
-
 
   return (
     <div className='contactMe-section' id='contactMe-section'>

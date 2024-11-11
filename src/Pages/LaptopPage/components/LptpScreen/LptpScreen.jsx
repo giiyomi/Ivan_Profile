@@ -45,6 +45,7 @@ export default function LptpScreen(props) {
     if(shwGgleChrme) {
       const shwPrflPg = setTimeout(()=>{
         setShwPrflePg(true)
+        localStorage.setItem('laptopView', true)
       },8000)
 
       return () => clearTimeout(shwPrflPg)
