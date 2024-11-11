@@ -30,7 +30,7 @@ const LftSdeButton = ({setLptpView}) => {
 
     return () =>  window.removeEventListener('resize', handleResize);
     
-  }, []);
+  }, [setLptpView]);
 
   const backToLptpView = () => {
     console.log('asdf')
