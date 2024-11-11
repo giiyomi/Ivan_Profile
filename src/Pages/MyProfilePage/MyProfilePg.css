@@ -18,95 +18,30 @@
     }
 }
 
-.copyright-container{
+.submitDelay-container{
+    height: 100%;
     width: 100%;
-    padding: 30px 0;
-    background-color: rgba(10,10,10,.9);
-}
-
-.copyright-placer{
-    padding-inline: 15%;
-    font-family: 'Roboto Mono', monospace;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.footer-designer-name{
-    margin: 0;
-    font-size: 16px;
-    font-weight: 300;
-    color: rgba(240,240,240,.2);
-    margin-right: 5px;
-}
-
-
-.footer-links-container, .footer-designer-name{
+    position: fixed;
+    padding: 0 40px;
+    background-color: rgba(0,0,0,.9);
+    color: white;
+    text-align: center;
+    flex-direction: column;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 10%;
+    z-index: 1;
 }
 
-.footer-links{
-    line-height: 33px;
-}
-
-.footer-links-container a{
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 1rem;
+.submitDelay-container h4{
+    font-size: 20px;
     font-weight: 300;
-    color: rgba(180,180,180,.6);
-    cursor: pointer;
-    transition: all .3s;
+    letter-spacing: 1px;
 }
 
-
-.footer-links-container a:hover{
-    color: rgba(100,100,100,.1);
+.spinner-border.m-5{
+    height: 100px !important;
+    width: 100px !important;
+    margin: 0 !important;
 }
-
-.footer-links.left > :first-child{
-    margin-left:0;
-}
-
-.footer-links.right > :last-child{
-    margin-right:0;
-}
-
-.footer-designer-name a{
-    margin-right: 10px;
-    color: white ;
-    text-decoration: none;
-    transition: all .3s;
-} 
-
-.footer-designer-name a:hover{
-    color: rgba(240,240,240,.6) ;
-} 
-
-@media (max-width: 900px) {
-    .copyright-placer{
-        padding-inline: 5%;
-    }
-}
-
-@media (max-width: 900px) {
-    .copyright-placer > *{
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 570px) {
-    .footer-links-container{
-        margin: 16px auto ;
-        margin-top: 0;
-    }
-}
-
-@media (max-width: 450px) {
-    .copyright-container {
-        padding: 25px 0;
-    }
-}
-

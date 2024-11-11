@@ -7,11 +7,16 @@ import SkillsSec from './components/SkillsSec/SkillsSec'
 import PrtfolioSec from './components/PrtfolioSec/PrtfolioSec'
 import WbDetails from './components/PrtfolioSec/components/WbDetails/WbDetails'
 import CntactSec from './components/CntactSec/CntactSec'
+import ButtomNav from './components/BottomNav/ButtomNav'
+import LftSdeButton from './components/LftSdeBut/LftSdeButton'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 export default function MyProfilePg() {
+  const [lptpView, setLptpView] = useState(true)
   const [shwVwWbDtls, setShwVwWbDtls] = useState(false)
   const [prjctName, setPrjctName] =  useState([])
+  const [isLoading, setIsLoading] = useState(false)
+
 
   return (
     <div className='myProfile-page'>
@@ -30,29 +35,25 @@ export default function MyProfilePg() {
         prjctName={prjctName}
         />
       }
-      <CntactSec/>
-      <div className='copyright-container'>
-        <div className='copyright-placer'>
-          <p className='footer-links-container'>
-            <div className='footer-links left'>
-              <a href='#home-section'>HOME</a>
-              <a href='#aboutMe-section'>ABOUT</a>
-              <a href='#skills-section'>SKILLS</a>
-            </div>
-            <div className='footer-links right'>
-              <a href='#portfolio-section'>PORTFOLIO</a>
-              <a href='#contactMe-section'>CONNECT</a>
-            </div>
-          </p>
+      <CntactSec
+       setIsLoading={setIsLoading}
+      />
+      <ButtomNav/>
+
+      {lptpView && 
+        <LftSdeButton
+        setLptpView={setLptpView}
+        />
+      }
+
+      {isLoading &&
+        <div className='submitDelay-container'>
+          <div class="spinner-border m-5" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+            <h4>Thank you for your time. Please wait a moment while we send your details. We appreciate your patience.</h4>
         </div>
-        <div className='copyright-placer'>
-          <p className='footer-designer-name'> <span>All Rights Reserved. © 2024 <a href='https://ivanlang.netlify.app/' target="_blank" rel="noreferrer">Ivan</a> </span><span>Github Account : <a href='https://github.com/giiyomi' target="_blank" rel="noreferrer">Giiyomi</a></span>
-          </p>
-        </div>
-
-      </div>
-
-
+      }
     </div>
   )
 }
