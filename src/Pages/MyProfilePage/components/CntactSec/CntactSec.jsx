@@ -10,7 +10,7 @@ export default function CntactSec() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log('owkay')
+        console.log('Thank you for your interest!')
 
         const clientDetails = {
             name: clientName,
