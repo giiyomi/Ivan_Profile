@@ -8,13 +8,10 @@ function App() {
 
   useEffect(() => {
     const doneWithLaptopView = localStorage.getItem('laptopView')
-
     const handleResize = () => setShwPrflePg(doneWithLaptopView || window.innerWidth < 950);
-
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-    
   }, []);
 
   return (

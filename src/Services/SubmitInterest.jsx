@@ -34,23 +34,15 @@ const SubmitInterest = {
                 Authorization: `Bearer ${token}`,
             };
 
-            console.log(headers);
-
             const resp = await axios.get({LOCAL_API_URL}, { headers });
             const { data } = resp;
-
-            console.log(data);
             isLoading = false;
 
             return data;
         } catch (error) {
             isLoading = false;
-            console.log(error.response);
-            console.log(error.request)
-            console.log(error.message)
             alert("Error in fetching details.");
         } finally {
-            console.log(isLoading ? "Loading..." : "Finished");
         }
     }
 }

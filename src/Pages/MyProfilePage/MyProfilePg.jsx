@@ -19,12 +19,9 @@ export default function MyProfilePg() {
 
   useEffect(() => {
     const handleResize = () => setLptpView(window.innerWidth > 950);
-
     handleResize();
     window.addEventListener('resize', handleResize);
-
     return () =>  window.removeEventListener('resize', handleResize);
-    
   }, []);
 
   return (
@@ -58,7 +55,7 @@ export default function MyProfilePg() {
           <div class="spinner-border m-5" role="status">
             <span class="visually-hidden">Loading...</span>
           </div>
-            <h4>Thank you for your time. Please wait a moment while we send your details. We appreciate your patience.</h4>
+            <h4>Thank you! Please don't refresh as we process your details.</h4>
         </div>
       }
     </div>

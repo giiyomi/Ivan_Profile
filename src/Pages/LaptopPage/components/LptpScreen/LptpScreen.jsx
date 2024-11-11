@@ -112,7 +112,6 @@ export default function LptpScreen(props) {
     if (shwClckMe && !hdClckMe){
       setHdClckMe(true)
       const hideNotif = setTimeout(() => {
-        console.log('ewan')
         !shwGgleChrme && setShwClckMe(false) 
       }, 1450);
       return () => clearTimeout(hideNotif);

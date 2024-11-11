@@ -10,7 +10,7 @@ export default function CntactSec({setIsLoading}) {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log('Thank you for your interest!')
+        console.log('Thank you for your interest! We will respond to you as soon as possible.')
 
         const clientDetails = {
             name: clientName,
