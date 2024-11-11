@@ -14,7 +14,7 @@ const SubmitInterest = {
             const response = await axios.post(`${REMOTE_API_URL}/send-message`, { client_detail: clientDetails }, { headers });
             const { data } = response;
             if (data) {
-                alert("Your interest is submitted.");
+                alert("Your interest is submitted. We will respond to you as soon as possible.");
             }
         } catch (error) {
             alert("Please submit your details again.");
@@ -33,16 +33,18 @@ const SubmitInterest = {
             const headers = {
                 Authorization: `Bearer ${token}`,
             };
-
             const resp = await axios.get({LOCAL_API_URL}, { headers });
             const { data } = resp;
             isLoading = false;
-
             return data;
         } catch (error) {
             isLoading = false;
+            console.log(error.response);
+            console.log(error.request)
+            console.log(error.message)
             alert("Error in fetching details.");
         } finally {
+            console.log(isLoading ? "Loading..." : "Finished");
         }
     }
 }
