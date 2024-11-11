@@ -14,6 +14,8 @@ export default function LptpScreen(props) {
   const [currentDate, setCurrentDate] = useState(null)
   const myProfileRef = useRef(null);
 
+  const doneWithLaptopView = localStorage.getItem('laptopView')
+
   useEffect(() => {
     const updateCurrentTime = () => {
       const now = new Date();
@@ -41,19 +43,17 @@ export default function LptpScreen(props) {
     return () => clearInterval(date)
   },[setCurrentDate])
   
-  useEffect(()=>{
-    if(shwGgleChrme) {
-      const shwPrflPg = setTimeout(()=>{
-        setShwPrflePg(true)
-        localStorage.setItem('laptopView', true)
-      },8000)
-
-      return () => clearTimeout(shwPrflPg)
-    }else{
-      setShwPrflePg(false)
+  useEffect(() => {
+    if (shwGgleChrme) {
+      const shwPrflPg = setTimeout(() => {
+        setShwPrflePg(true);
+        localStorage.setItem('laptopView', true);
+      }, 8000);
+      return () => clearTimeout(shwPrflPg);
     }
-  })
-
+    setShwPrflePg(doneWithLaptopView);
+  }, [shwGgleChrme, doneWithLaptopView, setShwPrflePg]);
+  
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (myProfileRef.current && !myProfileRef.current.contains(event.target)) {
