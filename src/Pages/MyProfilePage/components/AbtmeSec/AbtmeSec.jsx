@@ -1,7 +1,26 @@
-import './AbtmeSec.css'
-import mypic from '../../../../Assets/images/mygrad_pic.png'
+import { useEffect, useState } from 'react';
+import './AbtmeSec.css';
+import mypic from '../../../../Assets/images/mygrad_pic.png';
+
+const my_resume_au = '/my_resume/LesterIvanNollora.pdf';
+const my_resume_ph = '/my_resume/LesterIvanNolloraPhp.pdf';
 
 export default function AbtmeSec() {
+    const [cvLink, setCvLink] = useState(my_resume_au);
+
+    useEffect(() => {
+        fetch('https://api.ipapi.com/api/check?access_key=de3ac659763f77cb270b553d441109ed')
+            .then(response => response.json())
+            .then(data => {
+                if (data.country_code === 'AU') {
+                    setCvLink(my_resume_au);
+                } else {
+                    setCvLink(my_resume_ph);
+                }
+            })
+            .catch(error => console.error('Error fetching location:', error));
+    }, []);
+
     return (
         <div className='aboutMe-section' id='aboutMe-section'>
             <div className='aboutMe-placer'>
@@ -12,7 +31,7 @@ export default function AbtmeSec() {
                     <p>
                         With a degree in Business Administration majoring in Accounting,
                         my career journey took an exciting turn when I followed my passion for technology.
-                        In early 2017, I landed a role as a Data Analyst in a collections agency, where I honed my analytical skills. 
+                        In early 2017, I landed a role as a Data Analyst in a collections agency, where I honed my analytical skills.
                     </p>
 
                     <p>
@@ -23,7 +42,7 @@ export default function AbtmeSec() {
                     </p>
 
                     <div className='dLcv-placer'>
-                        <button className="download-cv">Download CV</button>
+                    <a href={cvLink} download className="download-cv"><button className='download-cv'>Download CV</button></a>
                     </div>
                 </div>
 
@@ -33,7 +52,6 @@ export default function AbtmeSec() {
                 </div>
 
             </div>
-
         </div> 
-    )
+    );
 }

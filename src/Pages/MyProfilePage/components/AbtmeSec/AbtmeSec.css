@@ -102,6 +102,11 @@
     visibility: visible;
 }
 
+.dLcv-placer button a{
+    color: inherit;
+    text-decoration: none;
+}   
+
 @media (max-width:1200px) {
     .aboutMe-placer{
         padding-inline: 5%;

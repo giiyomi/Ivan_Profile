@@ -1,0 +1,5 @@
+"country","customer_id","expected_rev","total_amount_disputes","revenue_gain","revenue_loss","count_disputed","outliers_count_of_disputed"
+"France","3448-OWJOT",197550,189270,115767,81783,27,3.17
+"Russia","3568-JJMFW",202492,183364,194549,7943,25,2.87
+"China","1080-NDGAE",264681,214165,246117,18564,24,2.72
+"France","9725-EZTEJ",214610,197728,126486,88124,24,2.72

@@ -1,13 +1,13 @@
 import './PrtfolioSec.css'
 import { useState } from 'react';
-import projectList from './components/prjctsList/prjctsList'
+import webProjectList from './components/prjctsList/prjctsList'
 
 export default function PrtfolioSec(props) {
     const { setShwVwWbDtls, setPrjctName} = props
     const [activeTab, setActiveTab] = useState('')
     const [fadeOut, setFadeOut] = useState(false);
 
-    const canbeFilteredList = activeTab === '' ? projectList : projectList.filter(project => project.category === activeTab);
+    const canbeFilteredList = activeTab === '' ? webProjectList : webProjectList.filter(project => project.category === activeTab);
   
     const hndlSwtchngTabs = (e) =>{
       const tabName = e.target.innerText;
@@ -27,6 +27,12 @@ export default function PrtfolioSec(props) {
             break;
           case 'RUBY ON RAILS':
             setActiveTab('rails');
+            break;
+          case 'POWERBI':
+            setActiveTab('powerbi');
+            break;
+          case 'EXCEL & SQL':
+            setActiveTab('excel_sql');
             break;
           default:
             setActiveTab('');
@@ -59,24 +65,27 @@ export default function PrtfolioSec(props) {
                 <div className={`${activeTab === 'html_css' ? 'activeTab' : ''}`} onClick={(e)=>hndlSwtchngTabs(e)}>HTML & CSS</div>
                 <div className={`${activeTab === 'react' ? 'activeTab' : ''}`} onClick={(e)=>hndlSwtchngTabs(e)}>REACT JS</div>
                 <div className={`${activeTab === 'rails' ? 'activeTab' : ''}`} onClick={(e)=>hndlSwtchngTabs(e)}>RUBY ON  RAILS</div>
+                <div className={`${activeTab === 'powerbi' ? 'activeTab' : ''}`} onClick={(e)=>hndlSwtchngTabs(e)}>POWERBI</div>
+                <div className={`${activeTab === 'excel_sql' ? 'activeTab' : ''}`} onClick={(e)=>hndlSwtchngTabs(e)}>EXCEL & SQL</div>
             </div>
             </div>
             <div className={`projects-container ${fadeOut ? 'fade-out' : 'fade-in'}`}>
 
             {canbeFilteredList.map((project, index) => (
                 <div className='project' key={project.id} style={{ animationDelay: `${index * 0.02}s` }}>
-                <h2>{project.name}</h2>
+                  <h2>{project.name}</h2>
 
-                <div className='imgProj-container'>
-                    
-                <div className='viewProj-hover'>
-                    <div className='eyeSee-container' onClick={()=>hndlShwWbDtls(project.name, project.description)}>
-                        <i class="bi bi-eye"/>
-                        <div>see more</div>
+                  <div className='imgProj-container'>
+                      
+                    <div className='viewProj-hover'>
+                        <div className='eyeSee-container' onClick={()=>hndlShwWbDtls(project.name, project.description)}>
+                            <i class="bi bi-eye"/>
+                            <div>see more</div>
+                        </div>
                     </div>
-                </div>
-                <img src={project.src[0]} alt="lampaz_booking_form"/> 
-                </div>
+                    <img src={project.src[0]} alt="lampaz_booking_form"/> 
+                  </div>
+                  <h6 className='projField'>{project.field === 'web_development' ? "Web Development" : "Data Analytics"}</h6>
                 </div>
             )
             )}
