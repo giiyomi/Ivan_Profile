@@ -1,5 +1,5 @@
 import './MyProfilePg.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import TopNav from './components/TopNav/TopNav'
 import HomeSec from './components/HomeSec/HomeSec'
 import AbtmeSec from './components/AbtmeSec/AbtmeSec'
@@ -17,6 +17,15 @@ export default function MyProfilePg() {
   const [prjctName, setPrjctName] =  useState([])
   const [isLoading, setIsLoading] = useState(false)
 
+  useEffect(() => {
+    const handleResize = () => setLptpView(window.innerWidth > 950);
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () =>  window.removeEventListener('resize', handleResize);
+    
+  }, []);
 
   return (
     <div className='myProfile-page'>
@@ -41,9 +50,7 @@ export default function MyProfilePg() {
       <ButtomNav/>
 
       {lptpView && 
-        <LftSdeButton
-        setLptpView={setLptpView}
-        />
+        <LftSdeButton/>
       }
 
       {isLoading &&

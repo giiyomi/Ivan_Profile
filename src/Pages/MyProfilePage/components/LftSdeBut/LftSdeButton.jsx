@@ -1,11 +1,10 @@
 import './LftSdeButton.css'
 import { useState, useEffect, useRef } from 'react'
 
-const LftSdeButton = ({setLptpView}) => {
+const LftSdeButton = () => {
   const [clickedSideBut, setClickedSideBut] = useState(false)
   const buttonRef = useRef(null)
 
-  
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (buttonRef.current && !buttonRef.current.contains(e.target)) {
@@ -14,26 +13,10 @@ const LftSdeButton = ({setLptpView}) => {
     };
 
     document.addEventListener('click', handleClickOutside);
-
     return () => document.removeEventListener('click', handleClickOutside);
-    
   }, []); 
 
-
-  useEffect(() => {
-
-    const handleResize = () => window.innerWidth < 950  ? setLptpView(false) : setLptpView(true);
-
-    handleResize();
-
-    window.addEventListener('resize', handleResize);
-
-    return () =>  window.removeEventListener('resize', handleResize);
-    
-  }, [setLptpView]);
-
   const backToLptpView = () => {
-    console.log('asdf')
     localStorage.removeItem('laptopView');
     window.location.reload(); 
   }
