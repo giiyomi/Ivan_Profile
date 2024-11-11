@@ -20,6 +20,11 @@ export default function CntactSec({setIsLoading}) {
         }
 
         await SubmitInterest.sendDetails(clientDetails, setIsLoading)
+
+        setClientName('')
+        setClientEmail('')
+        setClientPhone('')
+        setClientMessage('')
     }
 
   return (
