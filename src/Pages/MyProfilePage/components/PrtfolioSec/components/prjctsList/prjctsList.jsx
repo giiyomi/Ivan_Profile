@@ -60,7 +60,7 @@ const projectList = [
     {
         name: 'My Profile',
         src: My_profile,
-        web_link: 'https://ivanlang.netlify.app/',
+        web_link: 'https://ivannollora.netlify.app/',
         github_link: 'https://github.com/giiyomi/Ivan-s_Profile',
         category: 'react',
         description: 'This is a personal profile website created in React, featuring a clean, user-friendly interface with interactive elements. The site is organized into tabs for Home, About Me, Skills, Portfolio, and Contact Me, offering a seamless browsing experience. Each section has been thoughtfully designed to be visually appealing and functional, and the website is fully responsive, ensuring accessibility across various devices.'

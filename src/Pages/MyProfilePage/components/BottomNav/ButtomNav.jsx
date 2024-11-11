@@ -17,7 +17,7 @@ const ButtomNav = () => {
         </p>
         </div>
         <div className='copyright-placer'>
-        <p className='footer-designer-name'> <span>All Rights Reserved. © 2024 <a href='https://ivanlang.netlify.app/' target="_blank" rel="noreferrer">Ivan</a> </span><span>Github Account : <a href='https://github.com/giiyomi' target="_blank" rel="noreferrer">Giiyomi</a></span>
+        <p className='footer-designer-name'> <span>All Rights Reserved. © 2024 <a href='https://ivannollora.netlify.app/' target="_blank" rel="noreferrer">Ivan</a> </span><span>Github Account : <a href='https://github.com/giiyomi' target="_blank" rel="noreferrer">Giiyomi</a></span>
         </p>
         </div>
 
