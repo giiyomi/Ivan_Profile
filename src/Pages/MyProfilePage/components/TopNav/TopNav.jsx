@@ -8,8 +8,6 @@ export default function TopNav() {
   const [shwNavTabs, setShwNavTabs] =  useState(false)
   const navRef = useRef(null);
 
-  // console.log(activeSection)
-
   const handleShowTabs = useCallback(() => {
     if (shwNavTabs) {
       document.querySelector('.navbarTabs-placer').classList.add('closing');
