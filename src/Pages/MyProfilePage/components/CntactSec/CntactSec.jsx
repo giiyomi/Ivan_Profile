@@ -19,12 +19,12 @@ export default function CntactSec({setIsLoading}) {
             message:  clientMessage
         }
 
-        await SubmitInterest.sendDetails(clientDetails, setIsLoading)
-
         setClientName('')
         setClientEmail('')
         setClientPhone('')
         setClientMessage('')
+
+        await SubmitInterest.sendDetails(clientDetails, setIsLoading)
     }
 
   return (
@@ -43,6 +43,7 @@ export default function CntactSec({setIsLoading}) {
                     type="text"
                     name="client_name"
                     placeholder='Your Name'
+                    value={clientName}
                     onChange={e=> setClientName(e.target.value)}
                 />
 
@@ -50,7 +51,7 @@ export default function CntactSec({setIsLoading}) {
                     type="email"
                     name="client_email"
                     placeholder='Your Email'
-                    
+                    value={clientEmail}
                     onChange={e=> setClientEmail(e.target.value)}
                 />
 
@@ -58,12 +59,16 @@ export default function CntactSec({setIsLoading}) {
                     type="tel"
                     name="client_contact#"
                     placeholder='Your Phone'
+                    value={clientPhone}
                     onChange={e=> setClientPhone(e.target.value)}
                 />
                 </div>
 
                 <div className='yourMessage-container'>
-                    <textarea placeholder='Your Message' onChange={e=> setClientMessage(e.target.value)}/>
+                    <textarea
+                        placeholder='Your Message'
+                        value={clientMessage}
+                        onChange={e=> setClientMessage(e.target.value)}/>
                 </div>
             </div>
             <div className='sndMessgeButtn-container'>
