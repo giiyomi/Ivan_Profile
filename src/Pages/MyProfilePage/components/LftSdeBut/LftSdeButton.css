@@ -1,0 +1,78 @@
+.buttonToLptpPg-placer{
+    height: max-content;
+    width: max-content;
+    position: fixed;
+    left: 0;
+    top: 35%;
+    padding: 10px 5px;
+    color: white;
+    background-color: rgba(50,50,50,1);
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateX(-100px);
+    cursor: pointer;
+    animation: hideSideButton .3s forwards ease-in-out;
+    transition: background-color .5s;
+}
+
+.buttonToLptpPg-placer:hover{
+    
+    background-color: rgba(50,50,50,.9);
+}
+
+.buttonToLptpPg-placer.active{
+    animation: clickedSideButton .3s forwards ease-in-out;
+    transition: all 1s;
+}
+
+@keyframes clickedSideButton {
+    from{
+        transform: translateX(-100px);
+    }to{
+        transform: translateX(0);
+    }
+}
+
+@keyframes hideSideButton {
+    from{
+        transform: translateX(0px);
+    }to{
+        transform: translateX(-100px);
+    }
+}
+
+.buttonToLptpPg-placer i{
+    font-size: 25px;
+    transition: color .3s;
+    color: rgba(255,255,255,.6);
+}
+
+.buttonToLptpPg-placer.active i{
+    height: 100%;
+    font-size: 25px;
+    color: rgba(130,130,130,.5);
+}
+
+
+.buttonToLptpPg-placer button {
+    width: 90px !important;
+    border: none;
+    padding-right: 0;
+    background-color: transparent;
+    color: white;
+}
+
+.buttonToLptpPg-placer.active button {
+    width: 90px !important;
+    height: max-content;
+    border: none;
+    padding-right: 0;
+    background-color: transparent;
+    overflow: hidden;
+}

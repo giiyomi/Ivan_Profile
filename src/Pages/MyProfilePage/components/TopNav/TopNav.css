@@ -1,0 +1,320 @@
+.topNav-container{
+    height: 72px;
+    width: 100%;
+    min-height: max-content;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    z-index: 1;
+}
+
+.topNav-container.scrolled {
+    background-color: rgba(10,10,10,.9);
+}
+
+.navbarBrand-container{
+    height: 100%;
+    min-height: max-content;
+    flex: .3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbarBrand-placer{
+    height: 100%;
+    min-width: 215px;
+    position: relative;
+    padding: 10px 25px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarBrand-placer::before{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: -10px;
+    border-radius: 50px;
+    background-color: white;
+    animation: lineinBrandName 2s ease-in forwards;
+    z-index: 0;
+}
+
+.navbarBrand-placer::after{
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: calc(90%);
+    border-radius: 50px;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    animation: lineinBrandName 1s ease-in-out forwards 2s ;
+    z-index: 0;
+}
+
+@keyframes lineinBrandName {
+    from{
+        width: 0;
+    }to{
+        width: 30px;
+    }
+}
+
+.mybrand_name{
+    height: 100%;
+    width: 95%;
+    
+    z-index: 1;
+}
+
+.navbarTabs-container{
+    height: 100%;
+    flex: .7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuList-container{
+    display: none;
+}
+
+.navbarTabs-placer{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.navbarTabs-placer ul{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 500;
+    font-size: 1.1rem;
+    list-style: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap:10px;
+}
+
+.navbarTabs-placer li{
+    position: relative;
+    padding: 10px;
+    text-wrap: nowrap;
+    cursor: pointer;
+}
+
+.navbarTabs-placer li::before{
+    height: 3px;
+    width: 0;
+    position: absolute;
+    content: "";
+    left: 15px;
+    bottom: 0;
+    border-radius: 30px;
+    background-color: white;
+    cursor: pointer;
+    transform-origin: center;
+    transition: width .5s ease-in-out;
+}
+
+.navbarTabs-placer li:hover::before {
+    width: calc(100% - 30px);
+}
+
+.navbarTabs-container ul li.active {
+    font-weight: bold;
+    color: #007bff;
+    transition: color .3s;
+  }
+
+.navbarTabs-placer a{
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 950px) {
+
+    .topNav-container.scrolled{
+        min-height: max-content;
+        position: fixed;
+        padding: 10px 20px;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        z-index: 1;
+    }
+
+    .navbarBrand-container{
+        height: max-content;
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+ 
+    .navbarBrand-placer{
+        width: max-content;
+        flex:0;
+        display: flex;
+        justify-self: flex-start;
+    }
+
+    .mybrand_name{
+        height: 100%;
+        width: 80%;
+    }
+
+    .navbarBrand-placer::before, .navbarBrand-placer::after{
+        height: 2px;
+    }
+
+    @keyframes lineinBrandName {
+        from{
+            width: 0;
+        }to{
+            width: 20px;
+        }
+    }
+
+    .navbarBrand-placer::before{
+        left: 0;
+    }
+
+    .navbarBrand-placer::after{
+        left: calc(88%);
+    }
+
+    .menuList-container{
+        width: max-content;
+        padding: 4px 12px;
+        border: 1px solid white;
+        border-radius: 5px;
+        font-family: 'Roboto Mono', monospace;
+        font-size: 25px;
+        font-weight: 300;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:10px;
+        cursor: pointer;
+        transition: all .3s;
+    }
+
+    .menuList-container:hover{    
+        background-color: rgba(50,50,50,.6);
+    }
+
+    .navbarTabs-container{
+        height: max-content;
+        width: 100%;
+        display: none;
+    }
+
+    .navbarTabs-container.active{
+        height: max-content;
+        width: 100%;
+        flex: 1;
+        display: flex;
+        top: 70px;
+        left:0;
+        height: max-content;
+        width: 100%;
+        border-top: 1px solid rgba(50,50,50);
+    }
+
+    .navbarTabs-placer.closing {
+        animation: navGoingUp .3s ease-in-out forwards;
+    }
+
+    .navbarTabs-placer{
+        height: max-content;
+        width: 85%;
+        animation: navGoingDown .3s ease-in-out forwards;
+    }
+
+    @keyframes navGoingDown {
+        from{
+            height: 0;
+        }to{
+            height: 272px;
+        }
+    }
+
+    @keyframes navGoingUp {
+        from{
+            height: 272px;
+        }to{
+            height: 0;
+        }    
+    }
+
+    .navbarTabs-placer ul{
+        height: 100%;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+
+}
+
+@media (max-width:650px) {
+    .navbarBrand-container{
+        width: 90%;
+    }
+
+    .navbarBrand-placer{
+        width: 180px;
+        padding: 10px 20px;
+    }
+
+    .navbarTabs-placer{
+        width: 95%;
+    }
+}
+
+@media (max-width:450px) {
+    .navbarBrand-container{
+        width: 100%;
+    }
+
+
+    .navbarBrand-placer{
+        min-width: 125px;
+        padding: 15px 5px;
+        flex:0
+    }
+    
+    .navbarBrand-placer::before, .navbarBrand-placer::after{
+        display: none;
+    }
+
+    .mybrand_name{
+        height: 100% !important;
+        width: 100%;
+    }
+
+    .menuList-container{
+        padding: 3px  8px;
+        font-size: 20px;
+    }
+}
