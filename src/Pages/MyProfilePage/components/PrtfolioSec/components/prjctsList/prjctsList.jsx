@@ -95,7 +95,7 @@ const webProjectList = [
         description: `The Stock Trading App project was developed over three weeks, focusing on creating a robust platform for stock trading with comprehensive user management and transaction tracking features. Built using RSpec for testing, the application enables CRUD functionality for various user roles, including Admin, Broker, and Buyer, with secure authentication. Key user stories were implemented to ensure that traders could register, log in, and manage their stock portfolios. Traders receive email notifications on signup status and account approval, can buy and sell stocks to adjust their portfolios, and have access to a dedicated Portfolio page and a Transaction page for monitoring activity. Admins can manually create and manage users, approve trader accounts, and view both pending trader signups and transaction histories, using callbacks to update user status automatically. The Admin dashboard provides streamlined oversight, allowing easy monitoring of all user and transaction activities, thereby maintaining control over the app's operational flow.`
     },
     {
-        name: 'Olist Trading',
+        name: 'Olis Trading',
         src: Olist_trading,
         web_link: null,
         documentation_link: 'https://drive.google.com/drive/folders/1W_lykeKS8erC0nUsYtN_NffA5hq-SGcX?usp=drive_link',
