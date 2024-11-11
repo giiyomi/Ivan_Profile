@@ -13,7 +13,7 @@ function App() {
       setShwPrflePg(true);
     }
 
-    const handleResize = () => setShwPrflePg(doneWithLaptopView || window.innerWidth < 950);
+    const handleResize = () => setShwPrflePg(doneWithLaptopView || !window.innerWidth < 950);
 
 
     handleResize();
