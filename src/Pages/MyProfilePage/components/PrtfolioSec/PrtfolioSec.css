@@ -121,8 +121,8 @@
 }
 
 .imgProj-container{
-    position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -145,6 +145,17 @@
         transform: translateY(0);
     }
 }
+
+.imgProj{
+    height: 100%;
+    width: 100%;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 .viewProj-hover{
     height: 92%;

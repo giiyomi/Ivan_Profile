@@ -3,7 +3,7 @@ import { LOCAL_API_URL } from "../Constants/remoteConstants";
 import { REMOTE_API_URL } from "../Constants/remoteConstants";
 
 const SubmitInterest = {
-    sendDetails: async (clientDetails, setIsLoading) => {
+    sendDetails: async (clientDetails, setIsLoading, setSuccessful) => {
         setIsLoading(true); 
         try {
             const bearer_token = process.env.REACT_APP_API_TOKEN;
@@ -14,10 +14,21 @@ const SubmitInterest = {
             const response = await axios.post(`${REMOTE_API_URL}/send-message`, { client_detail: clientDetails }, { headers });
             const { data } = response;
             if (data) {
-                alert("Your interest is submitted. We will respond to you as soon as possible.");
+                setSuccessful(true)
+                alert("Thank you for your interest. We will respond to you as soon as possible.");
             }
         } catch (error) {
-            alert("Please submit your details again.");
+            setSuccessful(false);
+            if (error.response && error.response.data) {
+                const errorMessages = error.response.data;
+                const formattedErrors = Object.entries(errorMessages)
+                    .map(([field, messages]) => `${field}: ${messages.join(", ")}`)
+                    .join("\n");
+                
+                alert(`Submission failed:\n${formattedErrors}`);
+            } else {
+                alert("An unexpected error occurred. Please try again.");
+            }
         } finally {
             setIsLoading(false);
         }

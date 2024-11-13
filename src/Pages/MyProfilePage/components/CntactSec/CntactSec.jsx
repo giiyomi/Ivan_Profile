@@ -1,5 +1,5 @@
 import './CntactSec.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import SubmitInterest from '../../../../Services/SubmitInterest'
 
 export default function CntactSec({setIsLoading}) {
@@ -7,10 +7,22 @@ export default function CntactSec({setIsLoading}) {
     const [clientEmail, setClientEmail] =  useState('')
     const [clientPhone, setClientPhone] =  useState('')
     const [clientMessage, setClientMessage] =  useState('')
+    const [successfull, setSuccessful] = useState(false)
+
+    console.log(successfull)
+
+    useEffect(()=>{
+        if (successfull) {
+            setClientName('')
+            setClientEmail('')
+            setClientPhone('')
+            setClientMessage('')
+        }
+    },[successfull])
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log('Thank you for your interest! We will respond to you as soon as possible.')
+        console.log('Thank you for submitting interest!')
 
         const clientDetails = {
             name: clientName,
@@ -19,12 +31,8 @@ export default function CntactSec({setIsLoading}) {
             message:  clientMessage
         }
 
-        setClientName('')
-        setClientEmail('')
-        setClientPhone('')
-        setClientMessage('')
-
-        await SubmitInterest.sendDetails(clientDetails, setIsLoading)
+        await SubmitInterest.sendDetails(clientDetails, setIsLoading, setSuccessful)
+        
     }
 
   return (
@@ -63,6 +71,7 @@ export default function CntactSec({setIsLoading}) {
                         name="client_contact#"
                         placeholder='Your Phone'
                         value={clientPhone}
+                        minLength={9}
                         onChange={e=> setClientPhone(e.target.value)}
                         required
                     />
