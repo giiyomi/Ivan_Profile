@@ -76,6 +76,7 @@ export default function PrtfolioSec(props) {
                   <h2>{project.name}</h2>
 
                   <div className='imgProj-container'>
+                    <div className='imgProj'>
                       
                     <div className='viewProj-hover'>
                         <div className='eyeSee-container' onClick={()=>hndlShwWbDtls(project.name, project.description)}>
@@ -86,6 +87,7 @@ export default function PrtfolioSec(props) {
                     <img src={project.src[0]} alt="lampaz_booking_form"/> 
                   </div>
                   <h6 className='projField'>{project.field === 'web_development' ? "Web Development" : "Data Analytics"}</h6>
+                  </div>
                 </div>
             )
             )}
