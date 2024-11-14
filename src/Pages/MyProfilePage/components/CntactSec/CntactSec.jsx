@@ -9,8 +9,6 @@ export default function CntactSec({setIsLoading}) {
     const [clientMessage, setClientMessage] =  useState('')
     const [successfull, setSuccessful] = useState(false)
 
-    console.log(successfull)
-
     useEffect(()=>{
         if (successfull) {
             setClientName('')

@@ -362,8 +362,10 @@
 
 @keyframes chngingPg {
     from{
+        background-color: black;
         display: flex;
     }to{
+        background-color: black;
         display: none;
     }
 }
