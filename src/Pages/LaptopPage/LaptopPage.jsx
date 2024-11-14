@@ -26,8 +26,8 @@ export default function LaptopPage(props) {
                         <div class="mousepad-container">
                             <div class="mousepad"/>
                         </div>
+                        <div class="laptop-volume"/>
                     </div>
-                    <div class="laptop-volume"/>
                 </div>
                 <div className='tablePg-container'/>
                 

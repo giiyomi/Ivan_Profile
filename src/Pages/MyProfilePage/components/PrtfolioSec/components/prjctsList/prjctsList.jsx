@@ -107,10 +107,10 @@ const webProjectList = [
         name: 'Joodash',
         src: Joodash_proj,
         web_link: null,
-        documentation_link: 'https://drive.google.com/file/d/1fAiBmj45CQZd8dGcs6qGqkx-zzktil8f/view?usp=drive_link',
+        documentation_link: 'https://drive.google.com/drive/folders/1k7N24kYcn8V2b78CaeSRuProxJL8sk__?usp=drive_link',
         category: 'powerbi',
         field: 'data_analytics',
-        description: `Yellevate has been facing ongoing challenges with client disputes over the past few years. These disputes occur when customers are dissatisfied with the company's services and refuse to pay for them. Initial analysis revealed that nearly 20% of disputes resulted in a loss, leading to an average annual revenue decline of about 5%. To better understand the root causes and patterns of these disputes, Yellevate’s executives tasked the analytical team with gathering and examining key metrics. The focus was on assessing the processing time for invoice settlements, the time taken by Yellevate to resolve disputes, the percentage of disputes that resulted in a loss, the revenue impact from these lost disputes, and identifying the country with the highest losses. Using Excel and SQL, the team analyzed this data to provide insights, helping the company address these issues and minimize future revenue loss.`
+        description: `In the project for Joodash, a food delivery service, I developed a comprehensive Power BI dashboard that provides insights into key business metrics focused on delivery time. The dashboard analyzes factors such as vehicle type, order type, weather conditions, and road traffic, offering visualizations through various charts to illustrate average delivery times across these conditions. Using DAX formulas, I calculated specific metrics, including median delivery times, average delivery times in different weather conditions, and a comparison of delivery efficiency between scooters and motorcycles. A map feature was incorporated to compare geographical delivery and restaurant locations, enhancing spatial analysis. I also provided recommendations for improved data collection and accuracy, allowing Joodash to refine its service quality and benchmark performance against competitors as it prepares for expansion across Asia.`
     },
     {
         name: 'Youtube Dashboard',

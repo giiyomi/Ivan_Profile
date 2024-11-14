@@ -151,14 +151,15 @@
 }
 
 .laptop-volume{
-    height: 25px;
-    width: 970px;
+    height: 10%;
+    width: 117%;
     position: absolute;
-    border-radius: 35%;
+    border-radius: 50%;
+    border: 5px solid rgb(150,150,150);
     background-color: black;
-    bottom: 50%;
-    transform: translateY(50%);
-    clip-path: polygon(1% 100%, 99% 100%, 100% 0%, 0% 0%);
+    top: 96%;
+    transform: rotateX(-10deg)!important;
+    clip-path: polygon(10% 100%, 90% 100%, 92% 50%, 8% 50%);
 }
 
 .tablePg-container{
@@ -187,36 +188,6 @@
 
 
 
-
-@media (max-height:950px) {
-
-    .laptop-volume{
-        width: 960px !important;  
-        bottom: 15 !important;
-    }
-}
-
-@media (max-height:940px) {
-    .laptop-volume  {
-        width: 950px !important;
-        bottom: 15 !important;
-    }
-}
-
-@media (max-height:925px) {
-    .laptop-volume {
-        width: 940px !important;
-        bottom: 16 !important;
-    }   
-}
-
-@media (max-height: 900px) {
-    .laptop-volume{
-        width: 930px !important;  
-        bottom: 10 !important;
-    }
-}
-
 @media (max-height: 850px) {
     .tablePg-container{
         height: 45%;
@@ -225,9 +196,6 @@
 }
 
 @media (max-height: 800px) {
-    .laptop-volume{
-        width: 930px !important;
-    }
 
     .tablePg-container{
         height: 48%;
@@ -281,10 +249,6 @@
         transform: rotateX(0deg);
     }
 
-    .laptop-volume{
-        width: 785px !important;
-    }
-
 }
 
 @media (max-height: 670px), (max-width: 950px) {
@@ -328,11 +292,6 @@
     .mousepad{
         height: 90% !important;
     }
-
-    .laptop-volume{
-        width: 505px !important;
-    }
-    
 }
 
 
