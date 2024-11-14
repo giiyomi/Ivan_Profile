@@ -1,21 +1,20 @@
 import axios from "axios";
-import { LOCAL_API_URL } from "../Constants/remoteConstants";
-import { REMOTE_API_URL } from "../Constants/remoteConstants";
 
 const SubmitInterest = {
     sendDetails: async (clientDetails, setIsLoading, setSuccessful) => {
         setIsLoading(true); 
         try {
             const bearer_token = process.env.REACT_APP_API_TOKEN;
+            const remote_api_url_post = process.env.REACT_APP_REMOTE_API_URL_POST;
             const token = bearer_token ? bearer_token : null;
             const headers = {
                 Authorization: `Bearer ${token}`,
             };
-            const response = await axios.post(`${REMOTE_API_URL}/send-message`, { client_detail: clientDetails }, { headers });
+            const response = await axios.post(`${remote_api_url_post}`, { client_detail: clientDetails }, { headers });
             const { data } = response;
             if (data) {
                 setSuccessful(true)
-                alert("Thank you for your interest. We will respond to you as soon as possible.");
+                alert("Thank you for sending your interest! We will respond to you as soon as possible.");
             }
         } catch (error) {
             setSuccessful(false);
@@ -40,11 +39,12 @@ const SubmitInterest = {
 
         try {
             const bearer_token = process.env.REACT_APP_API_TOKEN;
+            const remote_api_url_get = process.env.REACT_APP_REMOTE_API_URL_GET;
             const token = bearer_token ? bearer_token : null;
             const headers = {
                 Authorization: `Bearer ${token}`,
             };
-            const resp = await axios.get({LOCAL_API_URL}, { headers });
+            const resp = await axios.get({remote_api_url_get}, { headers });
             const { data } = resp;
             isLoading = false;
             return data;
