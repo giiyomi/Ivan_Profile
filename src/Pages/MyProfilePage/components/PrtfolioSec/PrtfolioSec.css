@@ -120,11 +120,15 @@
     font-size: 20px;
 }
 
+.project-item-center{
+    margin: 0 auto;
+}
+
 .imgProj-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
 
 .imgProj-container:hover  .viewProj-hover{

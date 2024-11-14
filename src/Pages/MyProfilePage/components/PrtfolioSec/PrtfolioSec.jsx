@@ -73,6 +73,8 @@ export default function PrtfolioSec(props) {
 
             {canbeFilteredList.map((project, index) => (
                 <div className='project' key={project.id} style={{ animationDelay: `${index * 0.02}s` }}>
+
+                  <div className='project-item-center'>
                   <h2>{project.name}</h2>
 
                   <div className='imgProj-container'>
@@ -87,6 +89,7 @@ export default function PrtfolioSec(props) {
                     <img src={project.src[0]} alt="lampaz_booking_form"/> 
                   </div>
                   <h6 className='projField'>{project.field === 'web_development' ? "Web Development" : "Data Analytics"}</h6>
+                  </div>
                   </div>
                 </div>
             )
