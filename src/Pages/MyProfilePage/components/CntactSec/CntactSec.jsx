@@ -31,8 +31,6 @@ export default function CntactSec({setIsLoading}) {
     
         await SubmitInterest.sendDetails(clientDetails, setIsLoading, setSuccessful);
     };
-    
-    
 
   return (
     <div className='contactMe-section' id='contactMe-section'>
