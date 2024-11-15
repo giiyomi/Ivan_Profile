@@ -19,19 +19,20 @@ export default function CntactSec({setIsLoading}) {
     },[successfull])
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
-        console.log('Thank you for submitting interest!')
-
+        e.preventDefault();
+        console.log('Thank you for submitting interest!');
+    
         const clientDetails = {
             name: clientName,
             email: clientEmail,
             phone: clientPhone,
-            message:  clientMessage
-        }
-
-        await SubmitInterest.sendDetails(clientDetails, setIsLoading, setSuccessful)
-        
-    }
+            message: clientMessage,
+        };
+    
+        await SubmitInterest.sendDetails(clientDetails, setIsLoading, setSuccessful);
+    };
+    
+    
 
   return (
     <div className='contactMe-section' id='contactMe-section'>
