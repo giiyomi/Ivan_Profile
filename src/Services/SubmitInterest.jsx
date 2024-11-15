@@ -7,10 +7,28 @@ const SubmitInterest = {
             const bearer_token = process.env.REACT_APP_API_TOKEN;
             const remote_api_url_post = process.env.REACT_APP_REMOTE_API_URL_POST;
             const token = bearer_token ? bearer_token : null;
+            const firstResponse = await fetch('https://api.ipapi.com/api/check?access_key=de3ac659763f77cb270b553d441109ed');
+            const firstData = await firstResponse.json();     
+            let cityAndCountry = 'Unknown';
+
+            if (firstData.success === false) {
+                const secondResponse = await fetch('http://api.ipstack.com/check?access_key=0cd51216afe1a57a89353b91f6cf2e7b');
+                const secondData = await secondResponse.json();
+                if (secondData && secondData.city && secondData.country_name) {
+                    cityAndCountry = `${secondData.city}, ${secondData.country_name}`;
+                }
+            } else {
+                if (firstData && firstData.city && firstData.country_name) {
+                    cityAndCountry = `${firstData.city}, ${firstData.country_name}`;
+                }
+            }
+
             const headers = {
                 Authorization: `Bearer ${token}`
             };
-            const response = await axios.post(`${remote_api_url_post}`, { client_detail: clientDetails }, { headers });
+
+            const clientDetailsWithLocation = {...clientDetails, country: cityAndCountry}
+            const response = await axios.post(`${remote_api_url_post}`, { client_detail: clientDetailsWithLocation }, { headers });
             const { data } = response;
             if (data) {
                 setSuccessful(true)
@@ -44,7 +62,7 @@ const SubmitInterest = {
             const headers = {
                 Authorization: `Bearer ${token}`,
             };
-            const resp = await axios.get({remote_api_url_get}, { headers });
+            const resp = await axios.get(remote_api_url_get, { headers });
             const { data } = resp;
             isLoading = false;
             return data;
