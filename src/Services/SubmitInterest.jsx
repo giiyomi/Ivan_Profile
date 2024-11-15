@@ -8,7 +8,7 @@ const SubmitInterest = {
             const remote_api_url_post = process.env.REACT_APP_REMOTE_API_URL_POST;
             const token = bearer_token ? bearer_token : null;
             const headers = {
-                Authorization: `Bearer ${token}`,
+                Authorization: `Bearer ${token}`
             };
             const response = await axios.post(`${remote_api_url_post}`, { client_detail: clientDetails }, { headers });
             const { data } = response;

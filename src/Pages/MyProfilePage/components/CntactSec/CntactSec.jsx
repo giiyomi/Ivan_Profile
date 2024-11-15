@@ -7,6 +7,7 @@ export default function CntactSec({setIsLoading}) {
     const [clientEmail, setClientEmail] =  useState('')
     const [clientPhone, setClientPhone] =  useState('')
     const [clientMessage, setClientMessage] =  useState('')
+    const [clientCityAndCountryOnly, setClientCityAndCountryOnly] = useState('')
     const [successfull, setSuccessful] = useState(false)
 
     useEffect(()=>{
@@ -21,17 +22,33 @@ export default function CntactSec({setIsLoading}) {
     const handleSubmit = async (e) => {
         e.preventDefault()
         console.log('Thank you for submitting interest!')
-
+ 
+        const firstResponse = await fetch('https://api.ipapi.com/api/check?access_key=de3ac659763f77cb270b553d441109ed')
+        const firstData = await firstResponse.json()
+    
+        if (firstData.success === false) {
+            const secondResponse = await fetch('http://api.ipstack.com/check?access_key=0cd51216afe1a57a89353b91f6cf2e7b')
+            const secondData = await secondResponse.json()
+            secondData?
+                setClientCityAndCountryOnly(`${secondData.city}, ${secondData.country_name}`)
+                : setClientCityAndCountryOnly('Unknown')
+        } else {
+            firstData?
+                setClientCityAndCountryOnly(clientCityAndCountryOnly)
+                : setClientCityAndCountryOnly('Unknown')
+        }
+    
         const clientDetails = {
             name: clientName,
             email: clientEmail,
             phone: clientPhone,
-            message:  clientMessage
+            message: clientMessage,
+            country: clientCityAndCountryOnly
         }
-
+    
         await SubmitInterest.sendDetails(clientDetails, setIsLoading, setSuccessful)
-        
     }
+    
 
   return (
     <div className='contactMe-section' id='contactMe-section'>
