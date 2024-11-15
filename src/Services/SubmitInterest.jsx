@@ -10,14 +10,19 @@ const SubmitInterest = {
             const firstResponse = await fetch('https://api.ipapi.com/api/check?access_key=de3ac659763f77cb270b553d441109ed');
             const firstData = await firstResponse.json();     
             let cityAndCountry = 'Unknown';
-
+            
             if (firstData.success === false) {
+                
+                console.log(firstData.success)
                 const secondResponse = await fetch('http://api.ipstack.com/check?access_key=0cd51216afe1a57a89353b91f6cf2e7b');
                 const secondData = await secondResponse.json();
                 if (secondData && secondData.city && secondData.country_name) {
+                    
+                    console.log(secondData)
                     cityAndCountry = `${secondData.city}, ${secondData.country_name}`;
                 }
             } else {
+                console.log('1st Data: Failed')
                 if (firstData && firstData.city && firstData.country_name) {
                     cityAndCountry = `${firstData.city}, ${firstData.country_name}`;
                 }
@@ -28,13 +33,23 @@ const SubmitInterest = {
             };
 
             const clientDetailsWithLocation = {...clientDetails, country: cityAndCountry}
+
+            console.log(token)
+
+            console.log(clientDetailsWithLocation)
             const response = await axios.post(`${remote_api_url_post}`, { client_detail: clientDetailsWithLocation }, { headers });
             const { data } = response;
+
+            console.log(data)
             if (data) {
                 setSuccessful(true)
                 alert("Thank you for sending your interest! We will respond to you as soon as possible.");
             }
         } catch (error) {
+
+            console.log(error.response);
+            console.log(error.request)
+            console.log(error.message)
             setSuccessful(false);
             if (error.response && error.response.data) {
                 const errorMessages = error.response.data;
