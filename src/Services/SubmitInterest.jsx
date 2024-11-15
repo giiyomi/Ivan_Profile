@@ -11,8 +11,7 @@ const SubmitInterest = {
             const firstData = await firstResponse.json();     
             let cityAndCountry = 'Unknown';
             
-            if (firstData.success === false) {
-                
+            if (firstData.success === false) {          
                 const secondResponse = await fetch('https://api.ipstack.com/check?access_key=0cd51216afe1a57a89353b91f6cf2e7b');
                 const secondData = await secondResponse.json();
                 if (secondData && secondData.city && secondData.country_name) {
@@ -24,11 +23,10 @@ const SubmitInterest = {
                 }
             }
 
+            const clientDetailsWithLocation = {...clientDetails, country: cityAndCountry}          
             const headers = {
                 Authorization: `Bearer ${token}`
             };
-
-            const clientDetailsWithLocation = {...clientDetails, country: cityAndCountry}
 
             const response = await axios.post(`${remote_api_url_post}`, { client_detail: clientDetailsWithLocation }, { headers });
             const { data } = response;
